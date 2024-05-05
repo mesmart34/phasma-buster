@@ -1,7 +1,54 @@
 ﻿@page "/"
+@using PhasmaBuster.Common
+<PageTitle>Phasma-Buster</PageTitle>
 
-<PageTitle>Home</PageTitle>
+<div class="row">
+    <div class="col-4">
+        <RadzenFieldset Text="Стандартные улики">
+            @foreach (var evidence in _data.Evidences.Values.Where(x => x is StandartEvidence)
+                .Cast<StandartEvidence>()
+                .OrderBy(x => x.Sequence))
+            {
+                <div class="d-flex align-content-center">
+                    <RadzenCheckBox TValue="bool"
+                                    class="mx-1"
+                                    @bind-Value="@evidence.Mark"
+                                    Change="@((args) => OnEvidenceMark(evidence, args))"
+                                    Name="@evidence.Name"/>
+                    <RadzenIcon Icon="@evidence.IconName"/>
+                    <RadzenText TextStyle="TextStyle.Subtitle2"
+                                Text="@evidence.Name"/>
+                </div>
+            }
+        </RadzenFieldset>
+    </div>
+   
+   
+   <div class="col-8 row">
+       @foreach (var (ghost, evidences) in _data.GhostEvidences
+           .Where(x => !_evidencesMarked.Any() || _evidencesMarked.All(y => x.Value.Contains(y))))
+       {
+           <div class="col-4 ghost mb-2">
+               <RadzenPanel>
+                   <div class="row">
+                       <RadzenText Text="@ghost.Name"
+                                   TextStyle="TextStyle.H5"/>
+                       <div>
+                           @foreach (var evidence in evidences.Where(x => x is StandartEvidence)
+                               .Cast<StandartEvidence>()
+                               .OrderBy(x => x.Sequence))
+                           {
+                               <div class="d-flex align-content-center">
+                                   <RadzenIcon Icon="@evidence.IconName"/>
+                                   <RadzenText TextStyle="TextStyle.Subtitle2"
+                                               Text="@evidence.Name"/>
+                               </div>
+                           }
+                       </div>
+                   </div>
+               </RadzenPanel>
+           </div>
+       }
+   </div> 
+</div>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
