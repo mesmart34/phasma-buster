@@ -1,30 +1,52 @@
-using PhasmaBuster.Common;
-using PhasmaBuster.Common.Contracts;
-using Radzen;
+using System.Globalization;
+using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
+using Microsoft.JSInterop;
+using PhasmaBuster.Data;
+
 namespace PhasmaBuster.Pages;
 
 public partial class Home
 {
-    private Data _data = new();
-    private HashSet<IEvidence> _evidencesMarked = new();
+    private readonly Model _model = new();
+    private static readonly CultureInfo[] CultureInfos = {
+        new("ru-RU"),
+        new("en-US"),
+    };
+    private readonly Dictionary<string, string> _cultureDict =
+        new()
+        {
+            { "en-US", "English" },
+            { "ru-RU", "Русский" }
+        };
+    private CultureInfo _culture = CultureInfos[1];
+    
+    [Inject] 
+    private IStringLocalizer<PhasmaBusterTranslation> Localization { get; set; } = null!;
 
-    protected override Task OnInitializedAsync()
+    [Inject] 
+    private IJSRuntime Js { get; set; } = null!;
+
+    [Inject] 
+    private NavigationManager NavigationManager { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
     {
-        var a = 5;
-        return base.OnInitializedAsync();
+        var a = Localization["EMF5"];
+        await LoadCulture();
+        
+        await base.OnInitializedAsync();
     }
 
-    private Task OnEvidenceMark(StandartEvidence evidence, bool value)
+    private async Task LoadCulture()
     {
-        if (value)
-        {
-            _evidencesMarked.Add(evidence);
-        }
-        else
-        {
-            _evidencesMarked.Remove(evidence);
-        }
-        StateHasChanged();
-        return Task.CompletedTask;
+        var result = await Js.InvokeAsync<string>("blazorCulture.get");
+        _culture = CultureInfos.FirstOrDefault(x => x.Name == result) ?? CultureInfos[0];
+    }
+    
+    private async Task ChangeCulture(CultureInfo cultureInfo)
+    {
+        await Js.InvokeVoidAsync("blazorCulture.set", cultureInfo.Name);
+        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
 }
