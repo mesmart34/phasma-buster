@@ -2,7 +2,7 @@ using System.Drawing;
 
 namespace PhasmaBuster.Data.Evidences;
 
-public class StandartEvidence : BaseEvidence
+public class StandardEvidence : BaseEvidence
 {
     public string? IconName { get; set; }
     public bool Required { get; set; }

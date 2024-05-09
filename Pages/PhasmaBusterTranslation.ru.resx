@@ -17,4 +17,55 @@
     <data name="EMF5" xml:space="preserve">
         <value>ЭМП 5</value>
     </data>
+    <data name="DOTS" xml:space="preserve">
+        <value>Лазерный проектр</value>
+    </data>
+    <data name="ULTRAVIOLET" xml:space="preserve">
+        <value>Ультрафиолет</value>
+    </data>
+    <data name="FREEZING" xml:space="preserve">
+        <value>Минусовая температура</value>
+    </data>
+    <data name="WRITING" xml:space="preserve">
+        <value>Записи в блокноте</value>
+    </data>
+    <data name="SPIRIT_BOX" xml:space="preserve">
+        <value>Радиоприёмник</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
+        <value>Игрок может услышать уникальный крик через направленный микрофон.нши</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
+        <value>Крик в направленный микрофон</value>
+    </data>
+    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
+        <value>Мираж никогда не наступает в соль</value>
+    </data>
+    <data name="SALT_FOOTPRINTS" xml:space="preserve">
+        <value>Следы на соли</value>
+    </data>
+    <data name="STANDART" xml:space="preserve">
+        <value>Стандартные</value>
+    </data>
+    <data name="TELLS" xml:space="preserve">
+        <value>Особенные</value>
+    </data>
+    <data name="BANSHEE" xml:space="preserve">
+        <value>Банши</value>
+    </data>
+    <data name="WRAITH" xml:space="preserve">
+        <value>Мираж</value>
+    </data>
+    <data name="BEHAVIOUR" xml:space="preserve">
+        <value>Поведение</value>
+    </data>
+    <data name="HUNT_SANITY" xml:space="preserve">
+        <value>Охота и рассудок</value>
+    </data>
+    <data name="SPEED" xml:space="preserve">
+        <value>Скорость</value>
+    </data>
+    <data name="ABILITIES" xml:space="preserve">
+        <value>Способности</value>
+    </data>
 </root>

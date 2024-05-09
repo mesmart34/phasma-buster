@@ -60,7 +60,43 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to lol.
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ABILITIES {
+            get {
+                return ResourceManager.GetString("ABILITIES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string BANSHEE {
+            get {
+                return ResourceManager.GetString("BANSHEE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string BEHAVIOUR {
+            get {
+                return ResourceManager.GetString("BEHAVIOUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DOTS {
+            get {
+                return ResourceManager.GetString("DOTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string EMF5 {
             get {
@@ -69,11 +105,128 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to kek.
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string FREEZING {
+            get {
+                return ResourceManager.GetString("FREEZING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string GHOST_ORBS {
             get {
                 return ResourceManager.GetString("GHOST_ORBS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string HUNT_SANITY {
+            get {
+                return ResourceManager.GetString("HUNT_SANITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string PARABOLIC_MIC_SCREAM {
+            get {
+                return ResourceManager.GetString("PARABOLIC_MIC_SCREAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string PARABOLIC_MIC_SCREAM_DSCR {
+            get {
+                return ResourceManager.GetString("PARABOLIC_MIC_SCREAM_DSCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SALT_FOOTPRINTS {
+            get {
+                return ResourceManager.GetString("SALT_FOOTPRINTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SALT_FOOTPRINTS_DSCR {
+            get {
+                return ResourceManager.GetString("SALT_FOOTPRINTS_DSCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SPEED {
+            get {
+                return ResourceManager.GetString("SPEED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SPIRIT_BOX {
+            get {
+                return ResourceManager.GetString("SPIRIT_BOX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string STANDART {
+            get {
+                return ResourceManager.GetString("STANDART", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TELLS {
+            get {
+                return ResourceManager.GetString("TELLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ULTRAVIOLET {
+            get {
+                return ResourceManager.GetString("ULTRAVIOLET", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRAITH {
+            get {
+                return ResourceManager.GetString("WRAITH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRITING {
+            get {
+                return ResourceManager.GetString("WRITING", resourceCulture);
             }
         }
     }

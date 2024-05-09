@@ -19,9 +19,60 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="EMF5" xml:space="preserve">
-        <value>lol</value>
+        <value />
     </data>
     <data name="GHOST_ORBS" xml:space="preserve">
-        <value>kek</value>
+        <value />
+    </data>
+    <data name="ULTRAVIOLET" xml:space="preserve">
+        <value />
+    </data>
+    <data name="DOTS" xml:space="preserve">
+        <value />
+    </data>
+    <data name="FREEZING" xml:space="preserve">
+        <value />
+    </data>
+    <data name="WRITING" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SPIRIT_BOX" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SALT_FOOTPRINTS" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
+        <value />
+    </data>
+    <data name="STANDART" xml:space="preserve">
+        <value />
+    </data>
+    <data name="TELLS" xml:space="preserve">
+        <value />
+    </data>
+    <data name="BANSHEE" xml:space="preserve">
+        <value />
+    </data>
+    <data name="WRAITH" xml:space="preserve">
+        <value />
+    </data>
+    <data name="BEHAVIOUR" xml:space="preserve">
+        <value />
+    </data>
+    <data name="HUNT_SANITY" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SPEED" xml:space="preserve">
+        <value />
+    </data>
+    <data name="ABILITIES" xml:space="preserve">
+        <value />
     </data>
 </root>

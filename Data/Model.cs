@@ -1,80 +1,204 @@
 using System.Drawing;
 using PhasmaBuster.Data.Common;
 using PhasmaBuster.Data.Evidences;
+using PhasmaBuster.Pages;
 
 namespace PhasmaBuster.Data;
 
 public class Model
 {
-    public Dictionary<BaseEvidence, EvidenceState> FilterEvidences = new();
+    public readonly Dictionary<BaseEvidence, EvidenceState> FilterEvidences = new();
 
-    public List<BaseEvidence> Evidences;
-    
-    public static StandartEvidence Emf5 = new StandartEvidence()
+    public readonly List<BaseEvidence> Evidences;
+    public readonly List<Ghost> Ghosts;
+
+    #region StandartEvidence
+
+    private static readonly StandardEvidence Emf5 = new StandardEvidence()
     {
-        Name = "EMF5",
+        Name = PhasmaBusterTranslation.EMF5,
         Sequence = 0,
         Category = EvidenceType.Standart,
-        Color = Color.Red
+        Color = Color.Red,
+        IconName = "radar"
     };
-    
-    public static StandartEvidence Ultraviolet = new StandartEvidence()
+
+    private static readonly StandardEvidence Ultraviolet = new()
     {
-        Name = "Ультрафиолет",
+        Name = PhasmaBusterTranslation.ULTRAVIOLET,
         Sequence = 1,
         Category = EvidenceType.Standart,
-        Color = Color.Khaki
+        Color = Color.Khaki,
+        IconName = "fingerprint"
     };
-    
-    public static StandartEvidence SpiritBox = new StandartEvidence()
+
+    private static readonly StandardEvidence SpiritBox = new()
     {
-        Name = "Радиоприёмник",
+        Name = PhasmaBusterTranslation.SPIRIT_BOX,
         Sequence = 2,
         Category = EvidenceType.Standart,
-        Color = Color.Orange
+        Color = Color.Orange,
+        IconName = "radio"
     };
-    
-    public static StandartEvidence Writing = new StandartEvidence()
+
+    private static readonly StandardEvidence Writing = new()
     {
-        Name = "Записи в блокноте",
+        Name = PhasmaBusterTranslation.WRITING,
         Sequence = 3,
         Category = EvidenceType.Standart,
-        Color = Color.RoyalBlue
+        Color = Color.RoyalBlue,
+        IconName = "note_alt"
     };
-    
-    public static StandartEvidence Freezing = new StandartEvidence()
+
+    private static readonly StandardEvidence Freezing = new()
     {
-        Name = "Минусовая температура",
+        Name = PhasmaBusterTranslation.FREEZING,
         Sequence = 4,
         Category = EvidenceType.Standart,
-        Color = Color.SkyBlue
+        Color = Color.SkyBlue,
+        IconName = "ac_unit"
     };
-    
-    public static StandartEvidence Dots = new StandartEvidence()
+
+    private static readonly StandardEvidence Dots = new()
     {
-        Name = "Лазерная проекция",
+        Name = PhasmaBusterTranslation.DOTS,
         Sequence = 5,
         Category = EvidenceType.Standart,
-        Color = Color.Green
+        Color = Color.Green,
+        IconName = "blur_on"
     };
     
-    public static StandartEvidence GhostOrbs = new StandartEvidence()
+    private static readonly StandardEvidence GhostOrbs = new()
     {
-        Name = "GHOST_ORBS",
+        Name = PhasmaBusterTranslation.GHOST_ORBS,
         Sequence = 6,
         Category = EvidenceType.Standart,
-        Color = Color.Khaki
+        Color = Color.Khaki,
+        IconName = "auto_awesome"
     };
-    
-    public static TellsEvidence BansheeScream = new ()
+
+    #endregion
+
+    #region TellsEvidence
+
+    private static readonly TellsEvidence BansheeScream = new ()
     {
-        Name = "Крик в микрофон",
+        Name = PhasmaBusterTranslation.PARABOLIC_MIC_SCREAM,
         Category = EvidenceType.Tells,
         Description = new EvidenceDescription()
         {
-            Text = "Уникальный крик в направленный микрофон"
+            Text = PhasmaBusterTranslation.PARABOLIC_MIC_SCREAM_DSCR,
+            FilePath = "banchee_scream.mp3",
+            EvidenceDescriptionType = EvidenceDescriptionType.Audio
         }
     };
+    
+    private static readonly TellsEvidence SaltFootprint = new ()
+    {
+        Name = PhasmaBusterTranslation.SALT_FOOTPRINTS,
+        Category = EvidenceType.Tells,
+        Description = new EvidenceDescription()
+        {
+            Text = PhasmaBusterTranslation.SALT_FOOTPRINTS_DSCR
+        }
+    };
+
+    #endregion
+
+    #region Ghosts
+
+    private static readonly Ghost Banshee = new()
+    {
+        Name = PhasmaBusterTranslation.BANSHEE,
+        RequiredStandardEvidences = new (),
+        Evidences = new Dictionary<EvidenceType, List<BaseEvidence>>()
+        {
+            {
+                EvidenceType.Standart, 
+                new ()
+                {
+                    Ultraviolet,
+                    GhostOrbs,
+                    Dots
+                }
+            },
+            {
+                EvidenceType.Tells, 
+                new ()
+                {
+                    BansheeScream
+                }
+            }
+        },
+        SanityEvidence = new SanityEvidence()
+        {
+            Value = 50.0m
+        },
+        SpeedEvidence = new ()
+        {
+            Name = "Скорость",
+            Values = new List<SpeedEvidenceValue>()
+            {
+                new()
+                {
+                    Sequence = 0,
+                    Value = 1.7m
+                }
+            },
+            Description = new EvidenceDescription()
+            {
+                EvidenceDescriptionType = EvidenceDescriptionType.Audio,
+                FilePath = "1.7_steps.mp3"
+            }
+        }
+    };
+    
+    private static readonly Ghost Wraith = new()
+    {
+        Name = PhasmaBusterTranslation.WRAITH,
+        Evidences = new Dictionary<EvidenceType, List<BaseEvidence>>()
+        {
+            {
+                EvidenceType.Standart, 
+                new ()
+                {
+                    Emf5,
+                    SpiritBox,
+                    Dots
+                }
+            },
+            {
+                EvidenceType.Tells, 
+                new ()
+                {
+                    SaltFootprint
+                }
+            }
+        },
+        SanityEvidence = new SanityEvidence()
+        {
+            Value = 50.0m
+        },
+        SpeedEvidence = new ()
+        {
+            Name = "Скорость",
+            Values = new List<SpeedEvidenceValue>()
+            {
+                new()
+                {
+                    Sequence = 0,
+                    Value = 1.7m
+                }
+            },
+            Description = new EvidenceDescription()
+            {
+                EvidenceDescriptionType = EvidenceDescriptionType.Audio,
+                FilePath = "1.7_steps.mp3"
+            }
+        }
+    };
+
+    #endregion
     
     public Model()
     {
@@ -86,9 +210,22 @@ public class Model
             Freezing,
             GhostOrbs,
             Dots,
+            Writing,
             
-            BansheeScream
+            BansheeScream,
+            SaltFootprint
         };
+
+        Ghosts = new()
+        {
+            Banshee,
+            Wraith
+        };
+
+        foreach (var baseEvidence in Evidences)
+        {
+            FilterEvidences.Add(baseEvidence, EvidenceState.Idle);
+        }
     }
 
 }

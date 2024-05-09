@@ -1,20 +1,21 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using PhasmaBuster.Pages;
 
 namespace PhasmaBuster.Data.Common;
 
 public enum EvidenceType
 {
-    [Display(Description = "Стандарт")]
+    [Display(Description=nameof(PhasmaBusterTranslation.STANDART))]
     Standart = 0,
-    [Display(Description = "Особенности")]
+    [Display(Description = nameof(PhasmaBusterTranslation.TELLS))]
     Tells = 1,
-    [Display(Description = "Поведение")]
+    [Display(Description = nameof(PhasmaBusterTranslation.BEHAVIOUR))]
     Behaviours = 2,
-    [Display(Description = "Способности")]
+    [Display(Description = nameof(PhasmaBusterTranslation.ABILITIES))]
     Abilities = 3,
-    [Display(Description = "Охота и рассудок")]
+    [Display(Description = nameof(PhasmaBusterTranslation.HUNT_SANITY))]
     Hunt = 4,
-    [Display(Description = "Скорость")]
+    [Display(Description = nameof(PhasmaBusterTranslation.SPEED))]
     Speed = 5
 }

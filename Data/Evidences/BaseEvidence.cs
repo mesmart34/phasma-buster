@@ -2,7 +2,7 @@ using PhasmaBuster.Data.Common;
 
 namespace PhasmaBuster.Data.Evidences;
 
-public class BaseEvidence
+public abstract class BaseEvidence
 {
     public string Name { get; set; } = "Unknown";
     public EvidenceDescription? Description { get; set; }

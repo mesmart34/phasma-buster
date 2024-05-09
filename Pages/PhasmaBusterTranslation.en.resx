@@ -17,4 +17,55 @@
     <data name="GHOST_ORBS" xml:space="preserve">
         <value>Ghost Orbs</value>
     </data>
+    <data name="ULTRAVIOLET" xml:space="preserve">
+        <value>Ultraviolet</value>
+    </data>
+    <data name="DOTS" xml:space="preserve">
+        <value>DOTs</value>
+    </data>
+    <data name="FREEZING" xml:space="preserve">
+        <value>Freezing</value>
+    </data>
+    <data name="WRITING" xml:space="preserve">
+        <value>Writing</value>
+    </data>
+    <data name="SPIRIT_BOX" xml:space="preserve">
+        <value>Spirit Box</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
+        <value>A player can hear the unique scream through Parabolic Microphone</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
+        <value>Parabolic Microphone scream</value>
+    </data>
+    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
+        <value>Wraith never leaves footprints on salt</value>
+    </data>
+    <data name="SALT_FOOTPRINTS" xml:space="preserve">
+        <value>Salt footprints</value>
+    </data>
+    <data name="TELLS" xml:space="preserve">
+        <value>Tells</value>
+    </data>
+    <data name="STANDART" xml:space="preserve">
+        <value>Standart</value>
+    </data>
+    <data name="BANSHEE" xml:space="preserve">
+        <value>Banshee</value>
+    </data>
+    <data name="WRAITH" xml:space="preserve">
+        <value>Wraith</value>
+    </data>
+    <data name="BEHAVIOUR" xml:space="preserve">
+        <value>Behaviour</value>
+    </data>
+    <data name="HUNT_SANITY" xml:space="preserve">
+        <value>Hunt and sanity</value>
+    </data>
+    <data name="SPEED" xml:space="preserve">
+        <value>Speed</value>
+    </data>
+    <data name="ABILITIES" xml:space="preserve">
+        <value>Abilities</value>
+    </data>
 </root>

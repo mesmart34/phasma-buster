@@ -33,6 +33,10 @@
             get: () => window.localStorage['BlazorCulture'],
             set: (value) => window.localStorage['BlazorCulture'] = value
         };
+        window.PlayAudio = (elementName) => {
+            alert('lolkek')
+            document.getElementById(elementName).play();
+        }
     </script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
 </body>
