@@ -12,6 +12,22 @@ namespace PhasmaBuster.Pages;
 public partial class Home
 {
     private readonly Model _model = new();
+    private bool _sidebar1Expanded = true;
+    
+    [Inject] 
+    private NavigationManager NavigationManager { get; set; } = null!;
+    
+    private static readonly CultureInfo[] CultureInfos = {
+        new("ru-RU"),
+        new("en-US"),
+    };
+    private readonly Dictionary<string, string> _cultureDict =
+        new()
+        {
+            { "en-US", "English" },
+            { "ru-RU", "Русский" }
+        };
+    private CultureInfo _culture = CultureInfos[1];
 
     [Inject] 
     public TooltipService TooltipService { get; set; } = null!;
@@ -24,6 +40,7 @@ public partial class Home
 
     protected override async Task OnInitializedAsync()
     {
+        await LoadCulture();
         await base.OnInitializedAsync();
     }
 
@@ -64,5 +81,17 @@ public partial class Home
             default:
                 return string.Empty;
         }
+    }
+    
+    private async Task LoadCulture()
+    {
+        var result = await Js.InvokeAsync<string>("blazorCulture.get");
+        _culture = CultureInfos.FirstOrDefault(x => x.Name == result) ?? CultureInfos[0];
+    }
+    
+    private async Task ChangeCulture(CultureInfo cultureInfo)
+    {
+        await Js.InvokeVoidAsync("blazorCulture.set", cultureInfo.Name);
+        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
 }

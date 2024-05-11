@@ -6,17 +6,6 @@
     @* </div> *@
     <RadzenTooltip/>   
     <main>
-        <div class="top-row px-4">
-            <RadzenDropDown TValue="CultureInfo"
-                            Data="@CultureInfos"
-                            @bind-Value="@_culture"
-                            Change="@(async (args) => await ChangeCulture((CultureInfo)args))">
-                <Template Context="data">
-                    @(_cultureDict[((CultureInfo)data).Name])
-                </Template>
-            </RadzenDropDown>
-        </div>
-
         <article class="content px-4">
             @Body
         </article>
@@ -31,28 +20,9 @@
     [Inject] 
     private NavigationManager NavigationManager { get; set; } = null!;
     
-    private static readonly CultureInfo[] CultureInfos = {
-        new("ru-RU"),
-        new("en-US"),
-    };
-    private readonly Dictionary<string, string> _cultureDict =
-        new()
-        {
-            { "en-US", "English" },
-            { "ru-RU", "Русский" }
-        };
-    private CultureInfo _culture = CultureInfos[1];
-    
     protected override async Task OnInitializedAsync()
     {
-        await LoadCulture();
         await base.OnInitializedAsync();
-    }
-
-    private async Task LoadCulture()
-    {
-        var result = await Js.InvokeAsync<string>("blazorCulture.get");
-        _culture = CultureInfos.FirstOrDefault(x => x.Name == result) ?? CultureInfos[0];
     }
     
     private async Task ChangeCulture(CultureInfo cultureInfo)
