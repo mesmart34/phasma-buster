@@ -2,6 +2,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
+using PhasmaBuster.Common;
 using PhasmaBuster.Data;
 using PhasmaBuster.Data.Common;
 using PhasmaBuster.Data.Evidences;
@@ -11,23 +12,13 @@ namespace PhasmaBuster.Pages;
 
 public partial class Home
 {
-    private readonly Model _model = new();
-    private bool _sidebar1Expanded = true;
+    private Model _model = new();
     
     [Inject] 
     private NavigationManager NavigationManager { get; set; } = null!;
     
-    private static readonly CultureInfo[] CultureInfos = {
-        new("ru-RU"),
-        new("en-US"),
-    };
-    private readonly Dictionary<string, string> _cultureDict =
-        new()
-        {
-            { "en-US", "English" },
-            { "ru-RU", "Русский" }
-        };
-    private CultureInfo _culture = CultureInfos[1];
+    [Inject]
+    private PhasmaSignsProvider PhasmaSignsProvider { get; set; } = null!;
 
     [Inject] 
     public TooltipService TooltipService { get; set; } = null!;
@@ -37,17 +28,18 @@ public partial class Home
     
     [Inject] 
     private IStringLocalizer<PhasmaBusterTranslation> Localization { get; set; } = null!;
+    
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadCulture();
+        PhasmaSignsProvider.PhasmaSignChanged += OnPhasmaSignChanged;
         await base.OnInitializedAsync();
     }
 
-    private void SelectEvidence(BaseEvidence evidence)
+    private void OnPhasmaSignChanged(Model model)
     {
-        _model.FilterEvidences[evidence] =
-            (EvidenceState)((int)(_model.FilterEvidences[evidence] + 1) % Enum.GetValues<EvidenceState>().Length);
+        _model = model;
+        StateHasChanged();
     }
 
     private bool IsVisible(Ghost ghost)
@@ -68,30 +60,5 @@ public partial class Home
 
         ;
         return visible;
-    }
-
-    private string GetEvidenceCssClass(BaseEvidence evidence)
-    {
-        switch (_model.FilterEvidences[evidence])
-        {
-            case EvidenceState.Selected:
-                return "text-decoration-underline";
-            case EvidenceState.Forbidden:
-                return "text-decoration-line-through";
-            default:
-                return string.Empty;
-        }
-    }
-    
-    private async Task LoadCulture()
-    {
-        var result = await Js.InvokeAsync<string>("blazorCulture.get");
-        _culture = CultureInfos.FirstOrDefault(x => x.Name == result) ?? CultureInfos[0];
-    }
-    
-    private async Task ChangeCulture(CultureInfo cultureInfo)
-    {
-        await Js.InvokeVoidAsync("blazorCulture.set", cultureInfo.Name);
-        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
 }

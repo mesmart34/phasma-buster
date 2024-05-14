@@ -1,33 +1,150 @@
 ﻿@using System.Globalization
+@using PhasmaBuster.Common
+@using PhasmaBuster.Data
+@using PhasmaBuster.Data.Common
+@using PhasmaBuster.Data.Evidences
+@using PhasmaBuster.Pages
 @inherits LayoutComponentBase
-<div class="page">
-    @* <div class="sidebar"> *@
-    @*     <NavMenu/> *@
-    @* </div> *@
-    <RadzenTooltip/>   
-    <main>
+@* <div class="sidebar"> *@
+@*     <NavMenu/> *@
+@* </div> *@
+<RadzenTooltip/> 
+<RadzenLayout style="position: relative">
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" 
+                     AlignItems="AlignItems.Center" 
+                     Gap="0"
+                     JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenSidebarToggle Click="@(() => _sidebar1Expanded = !_sidebar1Expanded)" />
+            <RadzenLabel Text="" />
+            <div class="px-4">
+                <RadzenDropDown TValue="CultureInfo"
+                                Data="@CultureInfos"
+                                @bind-Value="@_culture"
+                                Change="@(async (args) => await ChangeCulture((CultureInfo)args))">
+                    <Template Context="data">
+                        @(_cultureDict[((CultureInfo)data).Name])
+                    </Template>
+                </RadzenDropDown>
+            </div>
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenSidebar @bind-Expanded="@_sidebar1Expanded">
+        <RadzenPanelMenu>
+            @foreach (var evidenceGroup in _model.Evidences
+                          .GroupBy(x => x.Category)
+                          .OrderBy(x => x.Key)
+                          .ToDictionary(x => x.Key, x => x.OrderBy(y => y.Category).ToList()))
+            {
+                <RadzenPanelMenuItem Text="@Localization[evidenceGroup.Key.GetCaption()]" Icon="home">
+                    @foreach (var evidence in evidenceGroup.Value)
+                    {
+                        <RadzenPanelMenuItem Click="@(() => SelectEvidence(evidence))"
+                                             title="@evidence.Description?.Text"
+                                             Icon="@(evidence is StandardEvidence standardEvidence ? standardEvidence.IconName: string.Empty)">
+                            <Template>
+                                <div class="@(GetEvidenceCssClass(evidence))">
+                                    @Localization[evidence.Name]
+                                </div>
+                            </Template>
+                        </RadzenPanelMenuItem>
+                    }
+                </RadzenPanelMenuItem>
+            }
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+    <RadzenBody>
         <article class="content px-4">
             @Body
         </article>
-    </main>
-</div>
+    </RadzenBody>
+</RadzenLayout>
 
 @code
 {
+    private bool _sidebar1Expanded = true;
+    private readonly Model _model = new();
+    
+    private static readonly CultureInfo[] CultureInfos = {
+        new("ru-RU"),
+        new("en-US"),
+    };
+    private readonly Dictionary<string, string> _cultureDict =
+        new()
+        {
+            { "en-US", "English" },
+            { "ru-RU", "Русский" }
+        };
+    private CultureInfo _culture = CultureInfos[1];
+    
     [Inject] 
     private IJSRuntime Js { get; set; } = null!;
     
     [Inject] 
     private NavigationManager NavigationManager { get; set; } = null!;
     
+    [Inject]
+    private PhasmaSignsProvider PhasmaSignsProvider { get; set; } = null!;
+    
+    [Inject] 
+    private IStringLocalizer<PhasmaBusterTranslation> Localization { get; set; } = null!;
+    
     protected override async Task OnInitializedAsync()
     {
+        await LoadCulture();
         await base.OnInitializedAsync();
+    }
+    
+    private async Task SelectEvidence(BaseEvidence evidence)
+    {
+        _model.FilterEvidences[evidence] =
+            (EvidenceState)((int)(_model.FilterEvidences[evidence] + 1) % Enum.GetValues<EvidenceState>().Length);
+        
+        await PhasmaSignsProvider.OnPhasmaSignChange(_model);
+    }
+    
+    private bool IsVisible(Ghost ghost)
+    {
+        var visible = true;
+
+        foreach (var evidence in _model.FilterEvidences.Where(x => x.Value == EvidenceState.Selected)
+                     .Select(x => x.Key))
+        {
+            visible &= ghost.HasEvidence(evidence);
+        }
+
+        foreach (var evidence in _model.FilterEvidences.Where(x => x.Value == EvidenceState.Forbidden)
+                     .Select(x => x.Key))
+        {
+            visible &= !ghost.HasEvidence(evidence);
+        }
+
+        ;
+        return visible;
+    }
+    
+    private async Task LoadCulture()
+    {
+        var result = await Js.InvokeAsync<string>("blazorCulture.get");
+        _culture = CultureInfos.FirstOrDefault(x => x.Name == result) ?? CultureInfos[0];
     }
     
     private async Task ChangeCulture(CultureInfo cultureInfo)
     {
         await Js.InvokeVoidAsync("blazorCulture.set", cultureInfo.Name);
         NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+    }
+    
+    private string GetEvidenceCssClass(BaseEvidence evidence)
+    {
+        switch (_model.FilterEvidences[evidence])
+        {
+            case EvidenceState.Selected:
+                return "text-decoration-underline";
+            case EvidenceState.Forbidden:
+                return "text-decoration-line-through";
+            default:
+                return string.Empty;
+        }
     }
 }
