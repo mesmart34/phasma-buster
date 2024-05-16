@@ -1,11 +1,9 @@
-using System.Globalization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
 using PhasmaBuster.Common;
 using PhasmaBuster.Data;
 using PhasmaBuster.Data.Common;
-using PhasmaBuster.Data.Evidences;
 using Radzen;
 
 namespace PhasmaBuster.Pages;
