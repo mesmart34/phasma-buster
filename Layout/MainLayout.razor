@@ -1,5 +1,6 @@
 ﻿@using System.Globalization
 @using PhasmaBuster.Common
+@using PhasmaBuster.Contracts
 @using PhasmaBuster.Data
 @using PhasmaBuster.Data.Common
 @using PhasmaBuster.Data.Evidences
@@ -26,6 +27,7 @@
                         @(_cultureDict[((CultureInfo)data).Name])
                     </Template>
                 </RadzenDropDown>
+                <RadzenLabel Text="@ApplicationContext.GetVersion()"/>
             </div>
         </RadzenStack>
     </RadzenHeader>
@@ -88,6 +90,9 @@
     
     [Inject] 
     private IStringLocalizer<PhasmaBusterTranslation> Localization { get; set; } = null!;
+
+    [Inject]
+    private IApplicationContext ApplicationContext { get; set; } = null!;
     
     protected override async Task OnInitializedAsync()
     {
