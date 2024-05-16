@@ -57,8 +57,7 @@ public partial class Home
         {
             visible &= !ghost.HasEvidence(evidence);
         }
-
-        ;
+        
         return visible;
     }
 }
