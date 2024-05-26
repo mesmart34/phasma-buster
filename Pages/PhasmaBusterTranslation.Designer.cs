@@ -60,7 +60,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Abilities.
         /// </summary>
         internal static string ABILITIES {
             get {
@@ -69,7 +69,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Banshee.
         /// </summary>
         internal static string BANSHEE {
             get {
@@ -78,7 +78,115 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Scream into the microphone.
+        /// </summary>
+        internal static string BANSHEE_EV1 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With a chance (25%) emits a unique sound into a directed microphone..
+        /// </summary>
+        internal static string BANSHEE_EV1_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Singing.
+        /// </summary>
+        internal static string BANSHEE_EV2 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Has an increased chance of a singing ghost event..
+        /// </summary>
+        internal static string BANSHEE_EV2_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrease in sanity upon touch.
+        /// </summary>
+        internal static string BANSHEE_EV3 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The target will lose 15% sanity if they touch the ghost during a singing ghost event (the event must be directed at the target, not another player)..
+        /// </summary>
+        internal static string BANSHEE_EV3_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observes the sanity of the target.
+        /// </summary>
+        internal static string BANSHEE_EV4 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Banshee&apos;s hunt is influenced only by the target&apos;s percentage sanity, not the team&apos;s overall sanity..
+        /// </summary>
+        internal static string BANSHEE_EV4_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target pursuit.
+        /// </summary>
+        internal static string BANSHEE_EV5 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only pursue the selected target during the hunt. (If the target is outside the location, the Banshee will behave like a regular ghost)..
+        /// </summary>
+        internal static string BANSHEE_EV5_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunt begins only after proximity..
+        /// </summary>
+        internal static string BANSHEE_EV6 {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunt begins only after proximity..
+        /// </summary>
+        internal static string BANSHEE_EV6_D {
+            get {
+                return ResourceManager.GetString("BANSHEE_EV6_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Behaviour.
         /// </summary>
         internal static string BEHAVIOUR {
             get {
@@ -87,7 +195,88 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Demon.
+        /// </summary>
+        internal static string DEMON {
+            get {
+                return ResourceManager.GetString("DEMON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delay in hunting after smudging.
+        /// </summary>
+        internal static string DEMON_EV1 {
+            get {
+                return ResourceManager.GetString("DEMON_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you light sage near a Demon, it cannot begin hunting for the next 60 seconds..
+        /// </summary>
+        internal static string DEMON_EV1_D {
+            get {
+                return ResourceManager.GetString("DEMON_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Short interval between hunts.
+        /// </summary>
+        internal static string DEMON_EV2 {
+            get {
+                return ResourceManager.GetString("DEMON_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The minimum interval between attacks is 20 seconds (25 seconds for other ghosts)..
+        /// </summary>
+        internal static string DEMON_EV2_D {
+            get {
+                return ResourceManager.GetString("DEMON_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Increased crusifix radius.
+        /// </summary>
+        internal static string DEMON_EV3 {
+            get {
+                return ResourceManager.GetString("DEMON_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The range of the Crucifix is increased by 50% (4.5m, 6m, and 7.5m respectively)..
+        /// </summary>
+        internal static string DEMON_EV3_D {
+            get {
+                return ResourceManager.GetString("DEMON_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunts anytime.
+        /// </summary>
+        internal static string DEMON_EV4 {
+            get {
+                return ResourceManager.GetString("DEMON_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunts with any sanity level.
+        /// </summary>
+        internal static string DEMON_EV4_D {
+            get {
+                return ResourceManager.GetString("DEMON_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DOTs.
         /// </summary>
         internal static string DOTS {
             get {
@@ -96,7 +285,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to EMF 5.
         /// </summary>
         internal static string EMF5 {
             get {
@@ -105,7 +294,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Freezing.
         /// </summary>
         internal static string FREEZING {
             get {
@@ -114,7 +303,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ghost Orbs.
         /// </summary>
         internal static string GHOST_ORBS {
             get {
@@ -123,7 +312,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Hunt and sanity.
         /// </summary>
         internal static string HUNT_SANITY {
             get {
@@ -132,7 +321,151 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Jinn.
+        /// </summary>
+        internal static string JINN {
+            get {
+                return ResourceManager.GetString("JINN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not turn off the breaker.
+        /// </summary>
+        internal static string JINN_EV1 {
+            get {
+                return ResourceManager.GetString("JINN_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never turns off the breaker. (Do not confuse with overload caused by a large number of lights turned on).
+        /// </summary>
+        internal static string JINN_EV1_D {
+            get {
+                return ResourceManager.GetString("JINN_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lowers sanity within 3 meters of itself when the breaker is on..
+        /// </summary>
+        internal static string JINN_EV2 {
+            get {
+                return ResourceManager.GetString("JINN_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burns 25% of sanity for all players within 3 meters of itself if the breaker is on; also, an EMF reading appears on the breaker..
+        /// </summary>
+        internal static string JINN_EV2_D {
+            get {
+                return ResourceManager.GetString("JINN_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mare.
+        /// </summary>
+        internal static string MARE {
+            get {
+                return ResourceManager.GetString("MARE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not turn on lights.
+        /// </summary>
+        internal static string MARE_EV1 {
+            get {
+                return ResourceManager.GetString("MARE_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Mare never turns on lights but instead has an increased chance to turn them off..
+        /// </summary>
+        internal static string MARE_EV1_D {
+            get {
+                return ResourceManager.GetString("MARE_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smashes light bulbs.
+        /// </summary>
+        internal static string MARE_EV2 {
+            get {
+                return ResourceManager.GetString("MARE_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Mare has an increased chance of a ghost event involving smashing light bulbs..
+        /// </summary>
+        internal static string MARE_EV2_D {
+            get {
+                return ResourceManager.GetString("MARE_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Walks into dark rooms.
+        /// </summary>
+        internal static string MARE_EV3 {
+            get {
+                return ResourceManager.GetString("MARE_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It has an increased chance of wandering from a lit room into a dark one.
+        /// </summary>
+        internal static string MARE_EV3_D {
+            get {
+                return ResourceManager.GetString("MARE_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instantly turns off the lights.
+        /// </summary>
+        internal static string MARE_EV4 {
+            get {
+                return ResourceManager.GetString("MARE_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instantly turns off the lights (switch) that the player has just turned on (no more than once every 10 seconds).
+        /// </summary>
+        internal static string MARE_EV4_D {
+            get {
+                return ResourceManager.GetString("MARE_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turns off the lights during a ghost event.
+        /// </summary>
+        internal static string MARE_EV5 {
+            get {
+                return ResourceManager.GetString("MARE_EV5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can turn off the lights during a paranormal event, not just before its onset..
+        /// </summary>
+        internal static string MARE_EV5_D {
+            get {
+                return ResourceManager.GetString("MARE_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parabolic Microphone scream.
         /// </summary>
         internal static string PARABOLIC_MIC_SCREAM {
             get {
@@ -141,7 +474,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to A player can hear the unique scream through Parabolic Microphone.
         /// </summary>
         internal static string PARABOLIC_MIC_SCREAM_DSCR {
             get {
@@ -150,7 +483,178 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phantom.
+        /// </summary>
+        internal static string PHANTOM {
+            get {
+                return ResourceManager.GetString("PHANTOM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disappearance after photo.
+        /// </summary>
+        internal static string PHANTOM_EV1 {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you photograph it during a ghost event (or on the summoning circle, music box), it will disappear immediately after the flash, the electronics will stop malfunctioning, and the heartbeat will stop, but the event will continue. There will be no interference in the photo and no ghost. (If you photograph it during an attack, there will also be no interference and no ghost in the photo)..
+        /// </summary>
+        internal static string PHANTOM_EV1_D {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMF during the chase.
+        /// </summary>
+        internal static string PHANTOM_EV2 {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approach a random player, and in the place where it arrives, you will get an EMF reading. The attack will not begin until it reaches its destination..
+        /// </summary>
+        internal static string PHANTOM_EV2_D {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lowers sanity within 10 meters of itself..
+        /// </summary>
+        internal static string PHANTOM_EV3 {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Being within 10 meters of the Phantom decreases the player&apos;s sanity at a rate of 0.4-0.5% per second..
+        /// </summary>
+        internal static string PHANTOM_EV3_D {
+            get {
+                return ResourceManager.GetString("PHANTOM_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poltergeist.
+        /// </summary>
+        internal static string POLTERGEIST {
+            get {
+                return ResourceManager.GetString("POLTERGEIST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strong throw.
+        /// </summary>
+        internal static string POLTERGEIST_EV1 {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can throw objects with greater force than other ghosts..
+        /// </summary>
+        internal static string POLTERGEIST_EV1_D {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Throws objects during hunts.
+        /// </summary>
+        internal static string POLTERGEIST_EV2 {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During hunts, it has a 100% chance to throw an object every 0.5 seconds..
+        /// </summary>
+        internal static string POLTERGEIST_EV2_D {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decreases sanity due to throwing objects..
+        /// </summary>
+        internal static string POLTERGEIST_EV3 {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For each object thrown by the poltergeist, 2% of sanity is deducted from those who witnessed the throw..
+        /// </summary>
+        internal static string POLTERGEIST_EV3_D {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiple throws.
+        /// </summary>
+        internal static string POLTERGEIST_EV4 {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can throw multiple objects simultaneously..
+        /// </summary>
+        internal static string POLTERGEIST_EV4_D {
+            get {
+                return ResourceManager.GetString("POLTERGEIST_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revenant.
+        /// </summary>
+        internal static string REVENANT {
+            get {
+                return ResourceManager.GetString("REVENANT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slower when not in sight of a player.
+        /// </summary>
+        internal static string REVENANT_EV1 {
+            get {
+                return ResourceManager.GetString("REVENANT_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Revenant moves at a speed of 1 m/s when it cannot see or hear players and does not sense their electronics..
+        /// </summary>
+        internal static string REVENANT_EV1_D {
+            get {
+                return ResourceManager.GetString("REVENANT_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salt footprints.
         /// </summary>
         internal static string SALT_FOOTPRINTS {
             get {
@@ -159,7 +663,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Wraith never leaves footprints on salt.
         /// </summary>
         internal static string SALT_FOOTPRINTS_DSCR {
             get {
@@ -170,6 +674,132 @@ namespace PhasmaBuster.Pages {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string SANITY {
+            get {
+                return ResourceManager.GetString("SANITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shadow.
+        /// </summary>
+        internal static string SHADOW {
+            get {
+                return ResourceManager.GetString("SHADOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not interact when players are present.
+        /// </summary>
+        internal static string SHADOW_EV1 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If at least one player is in the room with the Shade, it ceases to interact with the environment (except for candles)..
+        /// </summary>
+        internal static string SHADOW_EV1_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not hunt when players are present..
+        /// </summary>
+        internal static string SHADOW_EV2 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Shade cannot initiate an attack in a room with a player..
+        /// </summary>
+        internal static string SHADOW_EV2_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shade during ghost events.
+        /// </summary>
+        internal static string SHADOW_EV3 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During ghost events, the Shade is more likely to appear in its shadow form..
+        /// </summary>
+        internal static string SHADOW_EV3_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smoke model during ghost events.
+        /// </summary>
+        internal static string SHADOW_EV4 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High chance of a ghost event taking the form of a mist..
+        /// </summary>
+        internal static string SHADOW_EV4_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shadow form when using cursed items.
+        /// </summary>
+        internal static string SHADOW_EV5 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Shade is the only ghost that, when using the Ouija board or spirit box, can appear in its shadow form..
+        /// </summary>
+        internal static string SHADOW_EV5_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not trigger a ghost event at 100% sanity.
+        /// </summary>
+        internal static string SHADOW_EV6 {
+            get {
+                return ResourceManager.GetString("SHADOW_EV6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With each percentage of total sanity lost, the Shade increases its chance of manifesting a paranormal event by 2%..
+        /// </summary>
+        internal static string SHADOW_EV6_D {
+            get {
+                return ResourceManager.GetString("SHADOW_EV6_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed.
+        /// </summary>
         internal static string SPEED {
             get {
                 return ResourceManager.GetString("SPEED", resourceCulture);
@@ -177,7 +807,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Spirit Box.
         /// </summary>
         internal static string SPIRIT_BOX {
             get {
@@ -186,7 +816,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Standart.
         /// </summary>
         internal static string STANDART {
             get {
@@ -195,7 +825,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tells.
         /// </summary>
         internal static string TELLS {
             get {
@@ -204,7 +834,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ultraviolet.
         /// </summary>
         internal static string ULTRAVIOLET {
             get {
@@ -213,7 +843,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Wraith.
         /// </summary>
         internal static string WRAITH {
             get {
@@ -222,7 +852,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Writing.
         /// </summary>
         internal static string WRITING {
             get {

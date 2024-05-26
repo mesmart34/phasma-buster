@@ -14,7 +14,10 @@ public class Ghost
 
     public bool HasEvidence(BaseEvidence evidence)
     {
-        return Evidences[evidence.Category].Contains(evidence);
+        if (!Evidences.TryGetValue(evidence.Category, out var ev))
+            return false;
+        var result = ev.Any(x => x.Name == evidence.Name);
+        return result;
     }
 
     public bool IsStandardEvidenceRequired(StandardEvidence evidence)

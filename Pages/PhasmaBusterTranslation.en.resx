@@ -11,61 +11,271 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="EMF5" xml:space="preserve">
-        <value>EMF 5</value>
-    </data>
-    <data name="GHOST_ORBS" xml:space="preserve">
-        <value>Ghost Orbs</value>
-    </data>
-    <data name="ULTRAVIOLET" xml:space="preserve">
-        <value>Ultraviolet</value>
-    </data>
-    <data name="DOTS" xml:space="preserve">
-        <value>DOTs</value>
-    </data>
-    <data name="FREEZING" xml:space="preserve">
-        <value>Freezing</value>
-    </data>
-    <data name="WRITING" xml:space="preserve">
-        <value>Writing</value>
-    </data>
-    <data name="SPIRIT_BOX" xml:space="preserve">
-        <value>Spirit Box</value>
-    </data>
-    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
-        <value>A player can hear the unique scream through Parabolic Microphone</value>
-    </data>
-    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
-        <value>Parabolic Microphone scream</value>
-    </data>
-    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
-        <value>Wraith never leaves footprints on salt</value>
-    </data>
-    <data name="SALT_FOOTPRINTS" xml:space="preserve">
-        <value>Salt footprints</value>
-    </data>
-    <data name="TELLS" xml:space="preserve">
-        <value>Tells</value>
-    </data>
-    <data name="STANDART" xml:space="preserve">
-        <value>Standart</value>
+    <data name="ABILITIES" xml:space="preserve">
+        <value>Abilities</value>
     </data>
     <data name="BANSHEE" xml:space="preserve">
         <value>Banshee</value>
     </data>
-    <data name="WRAITH" xml:space="preserve">
-        <value>Wraith</value>
+    <data name="BANSHEE_EV1" xml:space="preserve">
+        <value>Scream into the microphone</value>
+    </data>
+    <data name="BANSHEE_EV1_D" xml:space="preserve">
+        <value>With a chance (25%) emits a unique sound into a directed microphone.</value>
+    </data>
+    <data name="BANSHEE_EV2" xml:space="preserve">
+        <value>Singing</value>
+    </data>
+    <data name="BANSHEE_EV2_D" xml:space="preserve">
+        <value>Has an increased chance of a singing ghost event.</value>
+    </data>
+    <data name="BANSHEE_EV3" xml:space="preserve">
+        <value>Decrease in sanity upon touch</value>
+    </data>
+    <data name="BANSHEE_EV3_D" xml:space="preserve">
+        <value>The target will lose 15% sanity if they touch the ghost during a singing ghost event (the event must be directed at the target, not another player).</value>
+    </data>
+    <data name="BANSHEE_EV4" xml:space="preserve">
+        <value>Observes the sanity of the target</value>
+    </data>
+    <data name="BANSHEE_EV4_D" xml:space="preserve">
+        <value>The Banshee's hunt is influenced only by the target's percentage sanity, not the team's overall sanity.</value>
+    </data>
+    <data name="BANSHEE_EV5" xml:space="preserve">
+        <value>Target pursuit</value>
+    </data>
+    <data name="BANSHEE_EV5_D" xml:space="preserve">
+        <value>Only pursue the selected target during the hunt. (If the target is outside the location, the Banshee will behave like a regular ghost).</value>
+    </data>
+    <data name="BANSHEE_EV6" xml:space="preserve">
+        <value>Hunt begins only after proximity.</value>
     </data>
     <data name="BEHAVIOUR" xml:space="preserve">
         <value>Behaviour</value>
     </data>
+    <data name="DEMON" xml:space="preserve">
+        <value>Demon</value>
+    </data>
+    <data name="DEMON_EV1" xml:space="preserve">
+        <value>Delay in hunting after smudging</value>
+    </data>
+    <data name="DEMON_EV1_D" xml:space="preserve">
+        <value>If you light sage near a Demon, it cannot begin hunting for the next 60 seconds.</value>
+    </data>
+    <data name="DEMON_EV2" xml:space="preserve">
+        <value>Short interval between hunts</value>
+    </data>
+    <data name="DEMON_EV2_D" xml:space="preserve">
+        <value>The minimum interval between attacks is 20 seconds (25 seconds for other ghosts).</value>
+    </data>
+    <data name="DEMON_EV3" xml:space="preserve">
+        <value>Increased crusifix radius</value>
+    </data>
+    <data name="DEMON_EV3_D" xml:space="preserve">
+        <value>The range of the Crucifix is increased by 50% (4.5m, 6m, and 7.5m respectively).</value>
+    </data>
+    <data name="DEMON_EV4" xml:space="preserve">
+        <value>Hunts anytime</value>
+    </data>
+    <data name="DEMON_EV4_D" xml:space="preserve">
+        <value>Hunts with any sanity level</value>
+    </data>
+    <data name="DOTS" xml:space="preserve">
+        <value>DOTs</value>
+    </data>
+    <data name="EMF5" xml:space="preserve">
+        <value>EMF 5</value>
+    </data>
+    <data name="FREEZING" xml:space="preserve">
+        <value>Freezing</value>
+    </data>
+    <data name="GHOST_ORBS" xml:space="preserve">
+        <value>Ghost Orbs</value>
+    </data>
     <data name="HUNT_SANITY" xml:space="preserve">
         <value>Hunt and sanity</value>
+    </data>
+    <data name="JINN" xml:space="preserve">
+        <value>Jinn</value>
+    </data>
+    <data name="JINN_EV1" xml:space="preserve">
+        <value>Does not turn off the breaker</value>
+    </data>
+    <data name="JINN_EV1_D" xml:space="preserve">
+        <value>Never turns off the breaker. (Do not confuse with overload caused by a large number of lights turned on)</value>
+    </data>
+    <data name="JINN_EV2" xml:space="preserve">
+        <value>Lowers sanity within 3 meters of itself when the breaker is on.</value>
+    </data>
+    <data name="JINN_EV2_D" xml:space="preserve">
+        <value>Burns 25% of sanity for all players within 3 meters of itself if the breaker is on; also, an EMF reading appears on the breaker.</value>
+    </data>
+    <data name="MARE" xml:space="preserve">
+        <value>Mare</value>
+    </data>
+    <data name="MARE_EV1" xml:space="preserve">
+        <value>Does not turn on lights</value>
+    </data>
+    <data name="MARE_EV1_D" xml:space="preserve">
+        <value>The Mare never turns on lights but instead has an increased chance to turn them off.</value>
+    </data>
+    <data name="MARE_EV2" xml:space="preserve">
+        <value>Smashes light bulbs</value>
+    </data>
+    <data name="MARE_EV2_D" xml:space="preserve">
+        <value>The Mare has an increased chance of a ghost event involving smashing light bulbs.</value>
+    </data>
+    <data name="MARE_EV3" xml:space="preserve">
+        <value>Walks into dark rooms</value>
+    </data>
+    <data name="MARE_EV3_D" xml:space="preserve">
+        <value>It has an increased chance of wandering from a lit room into a dark one</value>
+    </data>
+    <data name="MARE_EV4" xml:space="preserve">
+        <value>Instantly turns off the lights</value>
+    </data>
+    <data name="MARE_EV4_D" xml:space="preserve">
+        <value>Instantly turns off the lights (switch) that the player has just turned on (no more than once every 10 seconds)</value>
+    </data>
+    <data name="MARE_EV5" xml:space="preserve">
+        <value>Turns off the lights during a ghost event</value>
+    </data>
+    <data name="MARE_EV5_D" xml:space="preserve">
+        <value>Can turn off the lights during a paranormal event, not just before its onset.</value>
+    </data>
+    <data name="PHANTOM" xml:space="preserve">
+        <value>Phantom</value>
+    </data>
+    <data name="PHANTOM_EV1" xml:space="preserve">
+        <value>Disappearance after photo</value>
+    </data>
+    <data name="PHANTOM_EV1_D" xml:space="preserve">
+        <value>If you photograph it during a ghost event (or on the summoning circle, music box), it will disappear immediately after the flash, the electronics will stop malfunctioning, and the heartbeat will stop, but the event will continue. There will be no interference in the photo and no ghost. (If you photograph it during an attack, there will also be no interference and no ghost in the photo).</value>
+    </data>
+    <data name="PHANTOM_EV2" xml:space="preserve">
+        <value>EMF during the chase</value>
+    </data>
+    <data name="PHANTOM_EV2_D" xml:space="preserve">
+        <value>Approach a random player, and in the place where it arrives, you will get an EMF reading. The attack will not begin until it reaches its destination.</value>
+    </data>
+    <data name="PHANTOM_EV3" xml:space="preserve">
+        <value>Lowers sanity within 10 meters of itself.</value>
+    </data>
+    <data name="PHANTOM_EV3_D" xml:space="preserve">
+        <value>Being within 10 meters of the Phantom decreases the player's sanity at a rate of 0.4-0.5% per second.</value>
+    </data>
+    <data name="POLTERGEIST" xml:space="preserve">
+        <value>Poltergeist</value>
+    </data>
+    <data name="POLTERGEIST_EV1" xml:space="preserve">
+        <value>Strong throw</value>
+    </data>
+    <data name="POLTERGEIST_EV1_D" xml:space="preserve">
+        <value>Can throw objects with greater force than other ghosts.</value>
+    </data>
+    <data name="POLTERGEIST_EV2" xml:space="preserve">
+        <value>Throws objects during hunts</value>
+    </data>
+    <data name="POLTERGEIST_EV2_D" xml:space="preserve">
+        <value>During hunts, it has a 100% chance to throw an object every 0.5 seconds.</value>
+    </data>
+    <data name="POLTERGEIST_EV3" xml:space="preserve">
+        <value>Decreases sanity due to throwing objects.</value>
+    </data>
+    <data name="POLTERGEIST_EV3_D" xml:space="preserve">
+        <value>For each object thrown by the poltergeist, 2% of sanity is deducted from those who witnessed the throw.</value>
+    </data>
+    <data name="POLTERGEIST_EV4" xml:space="preserve">
+        <value>Multiple throws</value>
+    </data>
+    <data name="POLTERGEIST_EV4_D" xml:space="preserve">
+        <value>Can throw multiple objects simultaneously.</value>
+    </data>
+    <data name="REVENANT" xml:space="preserve">
+        <value>Revenant</value>
+    </data>
+    <data name="REVENANT_EV1" xml:space="preserve">
+        <value>Slower when not in sight of a player</value>
+    </data>
+    <data name="REVENANT_EV1_D" xml:space="preserve">
+        <value>The Revenant moves at a speed of 1 m/s when it cannot see or hear players and does not sense their electronics.</value>
+    </data>
+    <data name="SHADOW" xml:space="preserve">
+        <value>Shadow</value>
+    </data>
+    <data name="SHADOW_EV1" xml:space="preserve">
+        <value>Does not interact when players are present</value>
+    </data>
+    <data name="SHADOW_EV1_D" xml:space="preserve">
+        <value>If at least one player is in the room with the Shade, it ceases to interact with the environment (except for candles).</value>
+    </data>
+    <data name="SHADOW_EV2" xml:space="preserve">
+        <value>Does not hunt when players are present.</value>
+    </data>
+    <data name="SHADOW_EV2_D" xml:space="preserve">
+        <value>The Shade cannot initiate an attack in a room with a player.</value>
+    </data>
+    <data name="SHADOW_EV3" xml:space="preserve">
+        <value>Shade during ghost events</value>
+    </data>
+    <data name="SHADOW_EV3_D" xml:space="preserve">
+        <value>During ghost events, the Shade is more likely to appear in its shadow form.</value>
+    </data>
+    <data name="SHADOW_EV4" xml:space="preserve">
+        <value>Smoke model during ghost events</value>
+    </data>
+    <data name="SHADOW_EV4_D" xml:space="preserve">
+        <value>High chance of a ghost event taking the form of a mist.</value>
+    </data>
+    <data name="SHADOW_EV5" xml:space="preserve">
+        <value>Shadow form when using cursed items</value>
+    </data>
+    <data name="SHADOW_EV5_D" xml:space="preserve">
+        <value>The Shade is the only ghost that, when using the Ouija board or spirit box, can appear in its shadow form.</value>
+    </data>
+    <data name="SHADOW_EV6" xml:space="preserve">
+        <value>Does not trigger a ghost event at 100% sanity</value>
+    </data>
+    <data name="SHADOW_EV6_D" xml:space="preserve">
+        <value>With each percentage of total sanity lost, the Shade increases its chance of manifesting a paranormal event by 2%.</value>
     </data>
     <data name="SPEED" xml:space="preserve">
         <value>Speed</value>
     </data>
-    <data name="ABILITIES" xml:space="preserve">
-        <value>Abilities</value>
+    <data name="SPIRIT_BOX" xml:space="preserve">
+        <value>Spirit Box</value>
+    </data>
+    <data name="STANDART" xml:space="preserve">
+        <value>Standart</value>
+    </data>
+    <data name="TELLS" xml:space="preserve">
+        <value>Tells</value>
+    </data>
+    <data name="ULTRAVIOLET" xml:space="preserve">
+        <value>Ultraviolet</value>
+    </data>
+    <data name="WRITING" xml:space="preserve">
+        <value>Writing</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
+        <value>Parabolic Microphone scream</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
+        <value>A player can hear the unique scream through Parabolic Microphone</value>
+    </data>
+    <data name="SALT_FOOTPRINTS" xml:space="preserve">
+        <value>Salt footprints</value>
+    </data>
+    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
+        <value>Wraith never leaves footprints on salt</value>
+    </data>
+    <data name="WRAITH" xml:space="preserve">
+        <value>Wraith</value>
+    </data>
+    <data name="SANITY" xml:space="preserve">
+        <value>Sanity</value>
+    </data>
+    <data name="BANSHEE_EV6_D" xml:space="preserve">
+        <value>Outside of the hunt, the Banshee can go to its target, and then return to the room until the Banshee reaches its destination and the hunt begins. (P.S. The Banshee cannot reach its target if it is on another floor)</value>
     </data>
 </root>
