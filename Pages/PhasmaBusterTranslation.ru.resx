@@ -279,4 +279,389 @@
         <value>Вне охоты Банши может идти к своей цели, а потом возращаться в комнату, пока Банши не достигнет точки назначения охота не начнется.(P.S Банши не может дойти до своей цели если та находится на другом этаже)
 </value>
     </data>
+    <data name="YUREI" xml:space="preserve">
+        <value>Юрей</value>
+    </data>
+    <data name="YUREI_EV1" xml:space="preserve">
+        <value>Не выходит из комнаты когда обкурен</value>
+    </data>
+    <data name="YUREI_EV1_D" xml:space="preserve">
+        <value>Если зажечь благовонье рядом с Юрэем, то он не сможет выйти из комнаты в течении 60 секунд.</value>
+    </data>
+    <data name="YUREI_EV2" xml:space="preserve">
+        <value>Закрывает двери</value>
+    </data>
+    <data name="YUREI_EV2_D" xml:space="preserve">
+        <value>Захлопывает раскрытую дверь с щелчком вне гост ивента(задержка около 2 секунд), опуская рассудок игроков в радиусе 7,5 м на 15%.</value>
+    </data>
+    <data name="YUREI_EV3" xml:space="preserve">
+        <value>Двойное взаимодействие с дверью</value>
+    </data>
+    <data name="YUREI_EV3_D" xml:space="preserve">
+        <value>Может производит двойное взаимодействие с дверью вне гост ивента.</value>
+    </data>
+    <data name="YUREI_EV4" xml:space="preserve">
+        <value>Взаимодействует с входной дверью</value>
+    </data>
+    <data name="YUREI_EV4_D" xml:space="preserve">
+        <value>Единственный призрак, способный взаимодействовать со входной дверью вне паранормального явления.</value>
+    </data>
+    <data name="ONI" xml:space="preserve">
+        <value>Они</value>
+    </data>
+    <data name="ONI_EV1" xml:space="preserve">
+        <value>Снимает 20% рассудка</value>
+    </data>
+    <data name="ONI_EV1_D" xml:space="preserve">
+        <value>Не вызывает air ball</value>
+    </data>
+    <data name="ONI_EV2" xml:space="preserve">
+        <value>Во время паранормальных явлений снимает 20% рассудка, вместо стандартных 10%.</value>
+    </data>
+    <data name="ONI_EV2_D" xml:space="preserve">
+        <value>Не может выдать гост ивент в виде облачка/air ball.</value>
+    </data>
+    <data name="YOKAI" xml:space="preserve">
+        <value>Ёкай</value>
+    </data>
+    <data name="YOKAI_EV1" xml:space="preserve">
+        <value>Охота, если разговорах рядом</value>
+    </data>
+    <data name="YOKAI_EV1_D" xml:space="preserve">
+        <value>Может начать охоту до 80% рассудка, если игроки разговаривают рядом с ним.</value>
+    </data>
+    <data name="YOKAI_EV2" xml:space="preserve">
+        <value>Слышит и чувствует электронику в радиусе 2,5 м</value>
+    </data>
+    <data name="YOKAI_EV2_D" xml:space="preserve">
+        <value>Во время охоты слышит голоса игроков и чувствует их электронику только в радиусе до 2,5 м от себя.</value>
+    </data>
+    <data name="YOKAI_EV3" xml:space="preserve">
+        <value>Спавн близко к шкатулке</value>
+    </data>
+    <data name="YOKAI_EV3_D" xml:space="preserve">
+        <value>Радиус материализации от шкатулки 2,5 метра, вместо 5 метров</value>
+    </data>
+    <data name="MIMIC" xml:space="preserve">
+        <value>Мимик</value>
+    </data>
+    <data name="MOROI" xml:space="preserve">
+        <value>Морой</value>
+    </data>
+    <data name="MOROI_EV1" xml:space="preserve">
+        <value>Накладывает проклятие через речь</value>
+    </data>
+    <data name="MOROI_EV1_D" xml:space="preserve">
+        <value>Накладывает на игрока проклятие через радиоприемник или направленный микрофон. Проклятие удваивает скорость падения рассудка игрока, на которого оно наложено (можно приостановить его, выйдя из дома или выпить успокоительное, тем самым полностью его снять).</value>
+    </data>
+    <data name="MOROI_EV2" xml:space="preserve">
+        <value>Оглушение благовонием</value>
+    </data>
+    <data name="MOROI_EV2_D" xml:space="preserve">
+        <value>Оглушения благовонием во время атаки увеличено на 50% (7,5 секунд).</value>
+    </data>
+    <data name="MOROI_EV3" xml:space="preserve">
+        <value>Скорость зависит от рассудка</value>
+    </data>
+    <data name="MOROI_EV3_D" xml:space="preserve">
+        <value>Скорость Мороя зависит от общего рассудка команды. За каждые потерянные 5% общего рассудка, Морой увеличивает скорость на 0,075 м/с
+50% - 1,5 м/c
+45% - 1,575 м/c
+40% - 1,65 м/c
+35% - 1,725 м/c
+30% - 1,8 м/c
+25% - 1,825 м/c
+20% - 1,95 м/c
+15% - 2,025 м/c
+10% - 2,1 м/c
+5% - 2,175 м/c
+0% - 2,25 м/c</value>
+    </data>
+    <data name="MOROI_EV4" xml:space="preserve">
+        <value>Постоянная улика "Радиоприёмник"</value>
+    </data>
+    <data name="MOROI_EV4_D" xml:space="preserve">
+        <value>Морой всегда имеет улику "Радиоприёмник" на Кошмаре или Безумии</value>
+    </data>
+    <data name="DEOGEN" xml:space="preserve">
+        <value>Деоген</value>
+    </data>
+    <data name="THAYE_EV1" xml:space="preserve">
+        <value>Стареет</value>
+    </data>
+    <data name="THAYE_EV1_D" xml:space="preserve">
+        <value>Скорость, порог атаки и поведение Тайэ зависят от его возраста.
+-Порог рассудка в начале равен 75%. За каждую фазу старения этот показатель уменьшается на 6%. Последнее значение - 15%
+-Скорость в начале равна 2,75 м/с. За каждую фазу старения этот показатель уменьшается на 0,175 м/с. Последнее значение 1м/с
+-Активность вначале (взаимодействия и паранормальные явления) - 200%. За каждую фазу старения этот показатель падает на 15%. Последнее значение - 50%</value>
+    </data>
+    <data name="THAYE_EV2" xml:space="preserve">
+        <value>Не старет если рядом игрок</value>
+    </data>
+    <data name="THAYE_EV2_D" xml:space="preserve">
+        <value>Тайэ пытается постареть каждые две минуты. Если в момент попытки старения игроков нет рядом с призраком, он ждёт ещё 30 секунд прежде, чем попробовать постареть ещё раз. Всего за игру Тайэ может постареть до 10 раз.</value>
+    </data>
+    <data name="THAYE_EV3" xml:space="preserve">
+        <value>Опрос пенсионера</value>
+    </data>
+    <data name="THAYE_EV3_D" xml:space="preserve">
+        <value>Процесс старения Тайэ можно отследить на Доске Уиджи, если в разные промежутки времени спрашивать призрака про его возраст, то он будет выдавать разный возраст, если у него прошла фаза старения.</value>
+    </data>
+    <data name="BLINK" xml:space="preserve">
+        <value>Мерцание</value>
+    </data>
+    <data name="HANTU" xml:space="preserve">
+        <value>Ханту</value>
+    </data>
+    <data name="GORYO" xml:space="preserve">
+        <value>Горё</value>
+    </data>
+    <data name="GORYO_EV1" xml:space="preserve">
+        <value>Не меняет комнату</value>
+    </data>
+    <data name="GORYO_EV1_D" xml:space="preserve">
+        <value>Горе никогда не сменит свою комнату (исключением является использование на обезьяней лапке желания "Хочу вернуть свой рассудок"</value>
+    </data>
+    <data name="GORYO_EV2" xml:space="preserve">
+        <value>Не может отходить на большие расстояния от своей комнаты</value>
+    </data>
+    <data name="GORYO_EV2_D" xml:space="preserve">
+        <value>Проявляется на ДОТС только через видеокамеру и когда в комнате нет игроков (может проявиться в комнате с игроком, но шанс на это очень низкий).</value>
+    </data>
+    <data name="GORYO_EV3" xml:space="preserve">
+        <value>ДОТС только через камеру без игроков</value>
+    </data>
+    <data name="GORYO_EV3_D" xml:space="preserve">
+        <value>Проявляется на ДОТС только через видеокамеру и когда в комнате нет игроков (может проявиться в комнате с игроком, но шанс на это очень низкий).</value>
+    </data>
+    <data name="GORYO_EV4" xml:space="preserve">
+        <value>Постоянная улика “Лазерный проектор”</value>
+    </data>
+    <data name="GORYO_EV4_D" xml:space="preserve">
+        <value>Горё всегда будет иметь улику “Лазерный проектор” на Кошмаре и Безумии.</value>
+    </data>
+    <data name="HANTU_EV1" xml:space="preserve">
+        <value>Повышенный шанс выключить щиток</value>
+    </data>
+    <data name="HANTU_EV1_D" xml:space="preserve">
+        <value>Никогда не включает щиток, наоборот, имеет повышенный шанс выключить его.</value>
+    </data>
+    <data name="HANTU_EV2" xml:space="preserve">
+        <value>Постоянная улика минусовая температура</value>
+    </data>
+    <data name="HANTU_EV2_D" xml:space="preserve">
+        <value>Ханту всегда имеет улику “Минусовая температура” на Кошмаре или Безумии.</value>
+    </data>
+    <data name="HANTU_EV3" xml:space="preserve">
+        <value>Скорость зависит от помещения</value>
+    </data>
+    <data name="HANTU_EV3_D" xml:space="preserve">
+        <value>Скорость Ханту зависит от температуры помещения</value>
+    </data>
+    <data name="HANTU_EV4" xml:space="preserve">
+        <value>Пар из рта</value>
+    </data>
+    <data name="HANTU_EV4_D" xml:space="preserve">
+        <value>Испускает пар изо рта, если на локации выключен щиток.</value>
+    </data>
+    <data name="MYLING_EV2_D" xml:space="preserve">
+        <value>Чаще издает звуки в направленный микрофон, чем другие призраки</value>
+    </data>
+    <data name="MYLING_EV2" xml:space="preserve">
+        <value>Много говорит в микрофон</value>
+    </data>
+    <data name="MYLING_EV1" xml:space="preserve">
+        <value>Тихо ходит</value>
+    </data>
+    <data name="MYLING_EV1_D" xml:space="preserve">
+        <value>Во время охоты шаги и звуки призрака не слышны на расстоянии более 12 м (у других призраков 20 м)</value>
+    </data>
+    <data name="MYLING" xml:space="preserve">
+        <value>Мюлинг</value>
+    </data>
+    <data name="ONRYO_EV1" xml:space="preserve">
+        <value>Свеча работает как расятие</value>
+    </data>
+    <data name="ONRYO_EV1_D" xml:space="preserve">
+        <value>Пламя работает на Онрё, как распятие (радиус 4 метра). Свеча всегда имеет приоритет над распятием.</value>
+    </data>
+    <data name="ONRYO_EV2" xml:space="preserve">
+        <value>Чаще тушит свечу каждым kill-ом</value>
+    </data>
+    <data name="ONRYO_EV2_D" xml:space="preserve">
+        <value>Вероятность потушить свечу увеличивается с каждым убитым игроком</value>
+    </data>
+    <data name="ONRYO_EV3" xml:space="preserve">
+        <value>Охота после 3 потушенных свечей</value>
+    </data>
+    <data name="ONRYO_EV3_D" xml:space="preserve">
+        <value>После тушения трех источников пламени, Онре с вероятностью 100% начинает охоту, если рядом нет других источников пламени.</value>
+    </data>
+    <data name="WRAITH_EV1" xml:space="preserve">
+        <value>Солевые следы</value>
+    </data>
+    <data name="WRAITH_EV1_D" xml:space="preserve">
+        <value>Мираж никогда не наступает в соль</value>
+    </data>
+    <data name="WRAITH_EV2" xml:space="preserve">
+        <value>Телепортация с ЭМП с шансом ивента/охоты</value>
+    </data>
+    <data name="WRAITH_EV2_D" xml:space="preserve">
+        <value>Может телепортироваться к любому игроку на локации, при этом выдавая сигнал ЭМП в месте, куда он телепортировался. После телепортации может дать гост ивент, взаимодействие или охоту. В момент телепортации к вам вы можете сделать фото себе под ноги, получится фото с Взаимодействием.</value>
+    </data>
+    <data name="THE_TWINS_EV1" xml:space="preserve">
+        <value>Распятие работает только на основного госта</value>
+    </data>
+    <data name="THE_TWINS" xml:space="preserve">
+        <value>Близнецы</value>
+    </data>
+    <data name="THE_TWINS_EV1_D" xml:space="preserve">
+        <value>Распятие будет работать только на “настоящего” призрака (основного близнеца)</value>
+    </data>
+    <data name="THE_TWINS_EV2" xml:space="preserve">
+        <value>Разная скорость в зависимоси от появления</value>
+    </data>
+    <data name="THE_TWINS_EV2_D" xml:space="preserve">
+        <value>Скорость если призрак начал охоту из стандартного диапазона ("основной близнец") = 1,53 м/с, а из расширенного ("теневой близнец") = 1,87 м\с</value>
+    </data>
+    <data name="THE_TWINS_EV3" xml:space="preserve">
+        <value>Не основной гост не имеет признаков</value>
+    </data>
+    <data name="THE_TWINS_EV3_D" xml:space="preserve">
+        <value>Теневой близнец не отвечает через радиоприёмник, не влияет на температуру и не ходит по датчикам движения.</value>
+    </data>
+    <data name="THE_TWINS_EV4" xml:space="preserve">
+        <value>Равный шанс начать охоту из разных мест</value>
+    </data>
+    <data name="THE_TWINS_EV4_D" xml:space="preserve">
+        <value>Каждый близнец имеет 50% шанс начать охоту (теневой близнец начнет с места своего последнего взаимодействия).</value>
+    </data>
+    <data name="THE_TWINS_EV5" xml:space="preserve">
+        <value>Сам прерывает гост ивент</value>
+    </data>
+    <data name="THE_TWINS_EV5_D" xml:space="preserve">
+        <value>Может сам прервать свое паранормальное явление. Когда один из близнецов дает гост ивент, то другой может совершить взаимодействие и гост ивент прервется.</value>
+    </data>
+    <data name="THE_TWINS_EV6" xml:space="preserve">
+        <value>Два действия одновременно</value>
+    </data>
+    <data name="THE_TWINS_EV6_D" xml:space="preserve">
+        <value>Выполняет сразу 2 действия одновременно в диапазоне 3 метров от себя (стандартном диапазоне/"основной близнец") и 16 метров (расширенный диапазон/"теневой близнец"). При этом на графике активности появиться ломанная линия</value>
+    </data>
+    <data name="THAYE" xml:space="preserve">
+        <value>Тайэ</value>
+    </data>
+    <data name="SPIRIT_EV1" xml:space="preserve">
+        <value>Задержка охоты после благовония</value>
+    </data>
+    <data name="SPIRIT_EV1_D" xml:space="preserve">
+        <value>После зажигания благовония рядом с духом, он начнёт следующую атаку не менее, чем через 180 секунд.</value>
+    </data>
+    <data name="ONRYO" xml:space="preserve">
+        <value>Онрё</value>
+    </data>
+    <data name="MIMIC_EV1_D" xml:space="preserve">
+        <value>Всегда имеет призрачный огонек как дополнительную улику к количеству улик на вашей сложности.</value>
+    </data>
+    <data name="MIMIC_EV1" xml:space="preserve">
+        <value>Постоянная улика "Призрачный огонёк"</value>
+    </data>
+    <data name="MIMIC_EV2" xml:space="preserve">
+        <value>При старении поменяет призрака</value>
+    </data>
+    <data name="MIMIC_EV3" xml:space="preserve">
+        <value>Мимикрирует</value>
+    </data>
+    <data name="MIMIC_EV3_D" xml:space="preserve">
+        <value> Может имитировать любой тип призрака (включая себя), копируя все особенности. Использует способность раз в 30 - 120 секунд.</value>
+    </data>
+    <data name="MIMIC_EV2_D" xml:space="preserve">
+        <value>Если Мимик копирует Тайэ, то он будет выбирать случайный возраст и меняет призрака вместо старения.</value>
+    </data>
+    <data name="RAIJU_EV1" xml:space="preserve">
+        <value>Раньше охота при включеных приборах</value>
+    </data>
+    <data name="RAIJU_EV1_D" xml:space="preserve">
+        <value>Может начать охотиться с 65% рассудка, если рядом есть хоть один включенный электронный прибор.</value>
+    </data>
+    <data name="RAIJU_EV2" xml:space="preserve">
+        <value>Ускоряется, если включен прибор игрока</value>
+    </data>
+    <data name="RAIJU_EV2_D" xml:space="preserve">
+        <value>Ускоряется до 2,5 м/с если поблизости находиться включенная электронная экипировка игрока. Маленькие карты - 6 метров;
+Средние карты - 8 метров;
+Большие карты - 10 метров.</value>
+    </data>
+    <data name="RAIJU_EV3" xml:space="preserve">
+        <value>Увеличенный радиус помех</value>
+    </data>
+    <data name="RAIJU_EV3_D" xml:space="preserve">
+        <value>Райдзю будет создавать помехи электронному оборудованию на расстоянии 15 метров, вместо стандартных 10 метров.</value>
+    </data>
+    <data name="RAIJU" xml:space="preserve">
+        <value>Райдзю</value>
+    </data>
+    <data name="OBAKE" xml:space="preserve">
+        <value>Обакэ</value>
+    </data>
+    <data name="OBAKE_EV1" xml:space="preserve">
+        <value>Не всегда оставляет отпечатки</value>
+    </data>
+    <data name="OBAKE_EV1_D" xml:space="preserve">
+        <value>Обаке оставляет отпечатки с шансом 75%</value>
+    </data>
+    <data name="OBAKE_EV2" xml:space="preserve">
+        <value>Меняет свою модель </value>
+    </data>
+    <data name="OBAKE_EV2_D" xml:space="preserve">
+        <value>Во время охоты Обакэ имеет шанс в 6,66% при каждом мигании превратиться в другую модель призрака того же пола.</value>
+    </data>
+    <data name="OBAKE_EV3_D" xml:space="preserve">
+        <value>Обакэ всегда имеет улику "Ультрафиолет" на Кошмаре или Безумии.</value>
+    </data>
+    <data name="OBAKE_EV3" xml:space="preserve">
+        <value>Постоянная улика "Ультрафиолет"</value>
+    </data>
+    <data name="OBAKE_EV4" xml:space="preserve">
+        <value>Много пальцев</value>
+    </data>
+    <data name="OBAKE_EV4_D" xml:space="preserve">
+        <value>Оставляет уникальный отпечаток с вероятностью 16,7% (6 пальцев на дверях, 2 пальца на выключателях, 5 на клавиатурах и решётках)</value>
+    </data>
+    <data name="OBAKE_EV5" xml:space="preserve">
+        <value>Быстро пропадают отпечатки</value>
+    </data>
+    <data name="OBAKE_EV5_D" xml:space="preserve">
+        <value>Вдвое сокращает оставшееся время всех отпечатков на локации.</value>
+    </data>
+    <data name="DEOGEN_EV1" xml:space="preserve">
+        <value>Нельзя спрятаться</value>
+    </data>
+    <data name="DEOGEN_EV1_D" xml:space="preserve">
+        <value>Способен чувствовать присутствие живых на всей локации, поэтому спрятаться от него невозможно.Во время охоты выбирает ближайшего к себе игрока в шарообразном радиусе.</value>
+    </data>
+    <data name="DEOGEN_EV2" xml:space="preserve">
+        <value>Быстрее, когда ближе к цели</value>
+    </data>
+    <data name="DEOGEN_EV2_D" xml:space="preserve">
+        <value>Скорость зависит от расстояния до игрока, которого он выбрал целью.
+6&lt; метров - 3 м/c
+Между 6 и 2,5 метрами - постепенно замедляется
+2,5&gt; метров - 0,4 м/c</value>
+    </data>
+    <data name="DEOGEN_EV3" xml:space="preserve">
+        <value>Томное дыхание</value>
+    </data>
+    <data name="DEOGEN_EV3_D" xml:space="preserve">
+        <value>На расстоянии 1 метра от призрака с вероятностью 33 % по радиоприёмнику можно услышать уникальный звук.</value>
+    </data>
+    <data name="DEOGEN_EV4" xml:space="preserve">
+        <value>Постоянная улика "Радиоприёмник"</value>
+    </data>
+    <data name="DEOGEN_EV4_D" xml:space="preserve">
+        <value>Деоген всегда имеет улику "Радиоприёмник" на Кошмаре или Безумии</value>
+    </data>
+    <data name="SPIRIT" xml:space="preserve">
+        <value>Дух</value>
+    </data>
 </root>

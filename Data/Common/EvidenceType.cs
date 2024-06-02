@@ -7,7 +7,7 @@ namespace PhasmaBuster.Data.Common;
 public enum EvidenceType
 {
     [Display(Description=nameof(PhasmaBusterTranslation.STANDART))]
-    Standart = 0,
+    Standard = 0,
     [Display(Description = nameof(PhasmaBusterTranslation.TELLS))]
     Tells = 1,
     [Display(Description = nameof(PhasmaBusterTranslation.BEHAVIOUR))]
@@ -17,5 +17,7 @@ public enum EvidenceType
     [Display(Description = nameof(PhasmaBusterTranslation.HUNT_SANITY))]
     Hunt = 4,
     [Display(Description = nameof(PhasmaBusterTranslation.SPEED))]
-    Speed = 5
+    Speed = 5,
+    [Display(Description = nameof(PhasmaBusterTranslation.BLINK))]
+    Blink = 6
 }

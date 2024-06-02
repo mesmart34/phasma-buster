@@ -177,7 +177,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hunt begins only after proximity..
+        ///   Looks up a localized string similar to Outside of the hunt, the Banshee can go to its target, and then return to the room until the Banshee reaches its destination and the hunt begins. (P.S. The Banshee cannot reach its target if it is on another floor).
         /// </summary>
         internal static string BANSHEE_EV6_D {
             get {
@@ -191,6 +191,15 @@ namespace PhasmaBuster.Pages {
         internal static string BEHAVIOUR {
             get {
                 return ResourceManager.GetString("BEHAVIOUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blink.
+        /// </summary>
+        internal static string BLINK {
+            get {
+                return ResourceManager.GetString("BLINK", resourceCulture);
             }
         }
         
@@ -276,6 +285,87 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deogen.
+        /// </summary>
+        internal static string DEOGEN {
+            get {
+                return ResourceManager.GetString("DEOGEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV1 {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV1_D {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV2 {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV2_D {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV3 {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV3_D {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV4 {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string DEOGEN_EV4_D {
+            get {
+                return ResourceManager.GetString("DEOGEN_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DOTs.
         /// </summary>
         internal static string DOTS {
@@ -308,6 +398,168 @@ namespace PhasmaBuster.Pages {
         internal static string GHOST_ORBS {
             get {
                 return ResourceManager.GetString("GHOST_ORBS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goryo.
+        /// </summary>
+        internal static string GORYO {
+            get {
+                return ResourceManager.GetString("GORYO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doesn&apos;t change room.
+        /// </summary>
+        internal static string GORYO_EV1 {
+            get {
+                return ResourceManager.GetString("GORYO_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grief will never change its room (the exception is when using the wish &quot;I want my sanity back&quot; on the monkey&apos;s paw).
+        /// </summary>
+        internal static string GORYO_EV1_D {
+            get {
+                return ResourceManager.GetString("GORYO_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sits in the room.
+        /// </summary>
+        internal static string GORYO_EV2 {
+            get {
+                return ResourceManager.GetString("GORYO_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot walk long distances from his room.
+        /// </summary>
+        internal static string GORYO_EV2_D {
+            get {
+                return ResourceManager.GetString("GORYO_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DOTS only via camera without players.
+        /// </summary>
+        internal static string GORYO_EV3 {
+            get {
+                return ResourceManager.GetString("GORYO_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appears on DOTS only through a video camera and when there are no players in the room (it can appear in a room with a player, but the chance of this is very low)..
+        /// </summary>
+        internal static string GORYO_EV3_D {
+            get {
+                return ResourceManager.GetString("GORYO_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Permanent evidence “Laser projector”.
+        /// </summary>
+        internal static string GORYO_EV4 {
+            get {
+                return ResourceManager.GetString("GORYO_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goryo will always have the “Laser Projector” clue on Nightmare and Madness..
+        /// </summary>
+        internal static string GORYO_EV4_D {
+            get {
+                return ResourceManager.GetString("GORYO_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hantu.
+        /// </summary>
+        internal static string HANTU {
+            get {
+                return ResourceManager.GetString("HANTU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Increased chance to turn off the shield.
+        /// </summary>
+        internal static string HANTU_EV1 {
+            get {
+                return ResourceManager.GetString("HANTU_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never turns on the shield; on the contrary, it has an increased chance of turning it off..
+        /// </summary>
+        internal static string HANTU_EV1_D {
+            get {
+                return ResourceManager.GetString("HANTU_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant evidence of sub-zero temperature.
+        /// </summary>
+        internal static string HANTU_EV2 {
+            get {
+                return ResourceManager.GetString("HANTU_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hantu always has the “Minus Temperature” clue on Nightmare or Madness..
+        /// </summary>
+        internal static string HANTU_EV2_D {
+            get {
+                return ResourceManager.GetString("HANTU_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed ??depends on the room.
+        /// </summary>
+        internal static string HANTU_EV3 {
+            get {
+                return ResourceManager.GetString("HANTU_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hantu speed depends on room temperature.
+        /// </summary>
+        internal static string HANTU_EV3_D {
+            get {
+                return ResourceManager.GetString("HANTU_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam from the mouth.
+        /// </summary>
+        internal static string HANTU_EV4 {
+            get {
+                return ResourceManager.GetString("HANTU_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Emits steam from its mouth if the shield is turned off at the location..
+        /// </summary>
+        internal static string HANTU_EV4_D {
+            get {
+                return ResourceManager.GetString("HANTU_EV4_D", resourceCulture);
             }
         }
         
@@ -461,6 +713,414 @@ namespace PhasmaBuster.Pages {
         internal static string MARE_EV5_D {
             get {
                 return ResourceManager.GetString("MARE_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mimic.
+        /// </summary>
+        internal static string MIMIC {
+            get {
+                return ResourceManager.GetString("MIMIC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV1 {
+            get {
+                return ResourceManager.GetString("MIMIC_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV1_D {
+            get {
+                return ResourceManager.GetString("MIMIC_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV2 {
+            get {
+                return ResourceManager.GetString("MIMIC_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV2_D {
+            get {
+                return ResourceManager.GetString("MIMIC_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV3 {
+            get {
+                return ResourceManager.GetString("MIMIC_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MIMIC_EV3_D {
+            get {
+                return ResourceManager.GetString("MIMIC_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moroi.
+        /// </summary>
+        internal static string MOROI {
+            get {
+                return ResourceManager.GetString("MOROI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Places a curse through speech.
+        /// </summary>
+        internal static string MOROI_EV1 {
+            get {
+                return ResourceManager.GetString("MOROI_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Places a curse on the player via radio or directional microphone. The curse doubles the rate at which the sanity of the player on whom it is cast decreases (you can pause it by leaving the house or drinking a sedative, thereby removing it completely)..
+        /// </summary>
+        internal static string MOROI_EV1_D {
+            get {
+                return ResourceManager.GetString("MOROI_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smudge Stick Stunning.
+        /// </summary>
+        internal static string MOROI_EV2 {
+            get {
+                return ResourceManager.GetString("MOROI_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smudge Stick stunning duration during a hunt increased by 50% (7.5 seconds)..
+        /// </summary>
+        internal static string MOROI_EV2_D {
+            get {
+                return ResourceManager.GetString("MOROI_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed depends on sanity.
+        /// </summary>
+        internal static string MOROI_EV3 {
+            get {
+                return ResourceManager.GetString("MOROI_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The speed of the Moroi depends on the team&apos;s average sanity. For every 5% of average sanity lost, the Moroi increases its speed by 0.075 m/s:
+        ///
+        ///50% - 1.5 m/s
+        ///45% - 1.575 m/s
+        ///40% - 1.65 m/s
+        ///35% - 1.725 m/s
+        ///30% - 1.8 m/s
+        ///25% - 1.825 m/s
+        ///20% - 1.95 m/s
+        ///15% - 2.025 m/s
+        ///10% - 2.1 m/s
+        ///5% - 2.175 m/s
+        ///0% - 2.25 m/s.
+        /// </summary>
+        internal static string MOROI_EV3_D {
+            get {
+                return ResourceManager.GetString("MOROI_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Permanent evidence: Spirit Box.
+        /// </summary>
+        internal static string MOROI_EV4 {
+            get {
+                return ResourceManager.GetString("MOROI_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Moroi always has the &apos;Spirit Box&apos; evidence on Nightmare or Insanity difficulty.
+        /// </summary>
+        internal static string MOROI_EV4_D {
+            get {
+                return ResourceManager.GetString("MOROI_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Myling.
+        /// </summary>
+        internal static string MYLING {
+            get {
+                return ResourceManager.GetString("MYLING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Walks quietly.
+        /// </summary>
+        internal static string MYLING_EV1 {
+            get {
+                return ResourceManager.GetString("MYLING_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Makes sounds more often into a directional microphone than other ghosts.
+        /// </summary>
+        internal static string MYLING_EV1_D {
+            get {
+                return ResourceManager.GetString("MYLING_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Talks a lot into the microphone.
+        /// </summary>
+        internal static string MYLING_EV2 {
+            get {
+                return ResourceManager.GetString("MYLING_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MYLING_EV2_D {
+            get {
+                return ResourceManager.GetString("MYLING_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obake.
+        /// </summary>
+        internal static string OBAKE {
+            get {
+                return ResourceManager.GetString("OBAKE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doesn&apos;t always leave fingerprints.
+        /// </summary>
+        internal static string OBAKE_EV1 {
+            get {
+                return ResourceManager.GetString("OBAKE_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obake leaves prints with a 75% chance.
+        /// </summary>
+        internal static string OBAKE_EV1_D {
+            get {
+                return ResourceManager.GetString("OBAKE_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes its model.
+        /// </summary>
+        internal static string OBAKE_EV2 {
+            get {
+                return ResourceManager.GetString("OBAKE_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to While hunting, Obake has a 6.66% chance each time he blinks to transform into another ghost model of the same gender..
+        /// </summary>
+        internal static string OBAKE_EV2_D {
+            get {
+                return ResourceManager.GetString("OBAKE_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Always gives Ultraviolet.
+        /// </summary>
+        internal static string OBAKE_EV3 {
+            get {
+                return ResourceManager.GetString("OBAKE_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obake always has the Ultraviolet ability on Nightmare or Madness..
+        /// </summary>
+        internal static string OBAKE_EV3_D {
+            get {
+                return ResourceManager.GetString("OBAKE_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Many fingers.
+        /// </summary>
+        internal static string OBAKE_EV4 {
+            get {
+                return ResourceManager.GetString("OBAKE_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to leaves a unique fingerprint with a probability of 16.7% (6 fingers on doors, 2 fingers on switches, 5 on keyboards and grilles).
+        /// </summary>
+        internal static string OBAKE_EV4_D {
+            get {
+                return ResourceManager.GetString("OBAKE_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prints disappear quickly.
+        /// </summary>
+        internal static string OBAKE_EV5 {
+            get {
+                return ResourceManager.GetString("OBAKE_EV5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to halves the remaining time for all prints on location..
+        /// </summary>
+        internal static string OBAKE_EV5_D {
+            get {
+                return ResourceManager.GetString("OBAKE_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oni.
+        /// </summary>
+        internal static string ONI {
+            get {
+                return ResourceManager.GetString("ONI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Removes 20% Sanity.
+        /// </summary>
+        internal static string ONI_EV1 {
+            get {
+                return ResourceManager.GetString("ONI_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During paranormal events, removes 20% of sanity, instead of the standard 10%..
+        /// </summary>
+        internal static string ONI_EV1_D {
+            get {
+                return ResourceManager.GetString("ONI_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doesn&apos;t call air ball.
+        /// </summary>
+        internal static string ONI_EV2 {
+            get {
+                return ResourceManager.GetString("ONI_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot issue a guest event in the form of a cloud/air ball..
+        /// </summary>
+        internal static string ONI_EV2_D {
+            get {
+                return ResourceManager.GetString("ONI_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onryo.
+        /// </summary>
+        internal static string ONRYO {
+            get {
+                return ResourceManager.GetString("ONRYO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The candle works like a crucifix.
+        /// </summary>
+        internal static string ONRYO_EV1 {
+            get {
+                return ResourceManager.GetString("ONRYO_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The flame works on Onryo like a crucifix (radius 4 meters). The candle always takes precedence over the crucifix..
+        /// </summary>
+        internal static string ONRYO_EV1_D {
+            get {
+                return ResourceManager.GetString("ONRYO_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ONRYO_EV2 {
+            get {
+                return ResourceManager.GetString("ONRYO_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ONRYO_EV2_D {
+            get {
+                return ResourceManager.GetString("ONRYO_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ONRYO_EV3 {
+            get {
+                return ResourceManager.GetString("ONRYO_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ONRYO_EV3_D {
+            get {
+                return ResourceManager.GetString("ONRYO_EV3_D", resourceCulture);
             }
         }
         
@@ -627,6 +1287,69 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raiju.
+        /// </summary>
+        internal static string RAIJU {
+            get {
+                return ResourceManager.GetString("RAIJU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previously, hunting with devices turned on.
+        /// </summary>
+        internal static string RAIJU_EV1 {
+            get {
+                return ResourceManager.GetString("RAIJU_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can start hunting with 65% sanity if there is at least one switched on electronic device nearby..
+        /// </summary>
+        internal static string RAIJU_EV1_D {
+            get {
+                return ResourceManager.GetString("RAIJU_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speeds up if the player&apos;s device is turned on.
+        /// </summary>
+        internal static string RAIJU_EV2 {
+            get {
+                return ResourceManager.GetString("RAIJU_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accelerates up to 2.5 m/s if the player&apos;s electronic equipment is turned on nearby. Small cards - 6 meters; Medium cards - 8 meters; Large cards - 10 meters..
+        /// </summary>
+        internal static string RAIJU_EV2_D {
+            get {
+                return ResourceManager.GetString("RAIJU_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Increased interference radius.
+        /// </summary>
+        internal static string RAIJU_EV3 {
+            get {
+                return ResourceManager.GetString("RAIJU_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raiju will interfere with electronic equipment at a distance of 15 meters, instead of the standard 10 meters..
+        /// </summary>
+        internal static string RAIJU_EV3_D {
+            get {
+                return ResourceManager.GetString("RAIJU_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Revenant.
         /// </summary>
         internal static string REVENANT {
@@ -672,7 +1395,7 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Sanity.
         /// </summary>
         internal static string SANITY {
             get {
@@ -807,11 +1530,38 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SPIRIT {
+            get {
+                return ResourceManager.GetString("SPIRIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spirit Box.
         /// </summary>
         internal static string SPIRIT_BOX {
             get {
                 return ResourceManager.GetString("SPIRIT_BOX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SPIRIT_EV1 {
+            get {
+                return ResourceManager.GetString("SPIRIT_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SPIRIT_EV1_D {
+            get {
+                return ResourceManager.GetString("SPIRIT_EV1_D", resourceCulture);
             }
         }
         
@@ -834,6 +1584,190 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Thaye.
+        /// </summary>
+        internal static string THAYE {
+            get {
+                return ResourceManager.GetString("THAYE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ages.
+        /// </summary>
+        internal static string THAYE_EV1 {
+            get {
+                return ResourceManager.GetString("THAYE_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The speed, hunt threshold, and behavior of the Thaye depend on its age.
+        ///
+        ///The sanity threshold starts at 75%. For each aging phase, this value decreases by 6%, with a final value of 15%.
+        ///Speed starts at 2.75 m/s. For each aging phase, this value decreases by 0.175 m/s, with a final value of 1 m/s.
+        ///Activity at the start (interactions and paranormal events) is 200%. For each aging phase, this value decreases by 15%, with a final value of 50%.
+        /// </summary>
+        internal static string THAYE_EV1_D {
+            get {
+                return ResourceManager.GetString("THAYE_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not age if a player is nearby..
+        /// </summary>
+        internal static string THAYE_EV2 {
+            get {
+                return ResourceManager.GetString("THAYE_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does not age if a player is nearby..
+        /// </summary>
+        internal static string THAYE_EV2_D {
+            get {
+                return ResourceManager.GetString("THAYE_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Опрос пенсионера.
+        /// </summary>
+        internal static string THAYE_EV3 {
+            get {
+                return ResourceManager.GetString("THAYE_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Процесс старения Тайэ можно отследить на Доске Уиджи, если в разные промежутки времени спрашивать призрака про его возраст, то он будет выдавать разный возраст, если у него прошла фаза старения..
+        /// </summary>
+        internal static string THAYE_EV3_D {
+            get {
+                return ResourceManager.GetString("THAYE_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Twins.
+        /// </summary>
+        internal static string THE_TWINS {
+            get {
+                return ResourceManager.GetString("THE_TWINS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The crucifix only works for the main guest.
+        /// </summary>
+        internal static string THE_TWINS_EV1 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The crucifix will only work on the “real” ghost (the main twin).
+        /// </summary>
+        internal static string THE_TWINS_EV1_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Varying speed depending on appearance.
+        /// </summary>
+        internal static string THE_TWINS_EV2 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed ??if the ghost started hunting from the standard range (&quot;main twin&quot;) = 1.53 m/s, and from the extended range (&quot;shadow twin&quot;) = 1.87 m/s.
+        /// </summary>
+        internal static string THE_TWINS_EV2_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non-primary guest has no signs.
+        /// </summary>
+        internal static string THE_TWINS_EV3 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Shadow Twin does not respond via radio, does not affect temperature, and does not follow motion sensors..
+        /// </summary>
+        internal static string THE_TWINS_EV3_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equal chance to start hunting from different places.
+        /// </summary>
+        internal static string THE_TWINS_EV4 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each twin has a 50% chance of starting a hunt (the shadow twin will start from the location of their last interaction)..
+        /// </summary>
+        internal static string THE_TWINS_EV4_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV4_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to He interrupts the guest event himself.
+        /// </summary>
+        internal static string THE_TWINS_EV5 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to He can interrupt his paranormal activity himself. When one of the twins gives a guest event, the other can interact and the guest event will be interrupted..
+        /// </summary>
+        internal static string THE_TWINS_EV5_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV5_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two actions at the same time.
+        /// </summary>
+        internal static string THE_TWINS_EV6 {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs 2 actions simultaneously within a range of 3 meters from himself (standard range/&quot;main twin&quot;) and 16 meters (extended range/&quot;shadow twin&quot;). At the same time, a broken line will appear on the activity graph.
+        /// </summary>
+        internal static string THE_TWINS_EV6_D {
+            get {
+                return ResourceManager.GetString("THE_TWINS_EV6_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ultraviolet.
         /// </summary>
         internal static string ULTRAVIOLET {
@@ -852,11 +1786,191 @@ namespace PhasmaBuster.Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRAITH_EV1 {
+            get {
+                return ResourceManager.GetString("WRAITH_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRAITH_EV1_D {
+            get {
+                return ResourceManager.GetString("WRAITH_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRAITH_EV2 {
+            get {
+                return ResourceManager.GetString("WRAITH_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string WRAITH_EV2_D {
+            get {
+                return ResourceManager.GetString("WRAITH_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Writing.
         /// </summary>
         internal static string WRITING {
             get {
                 return ResourceManager.GetString("WRITING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yokai.
+        /// </summary>
+        internal static string YOKAI {
+            get {
+                return ResourceManager.GetString("YOKAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunting, if conversations are nearby.
+        /// </summary>
+        internal static string YOKAI_EV1 {
+            get {
+                return ResourceManager.GetString("YOKAI_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can begin hunting up to 80% Sanity if players talk near him..
+        /// </summary>
+        internal static string YOKAI_EV1_D {
+            get {
+                return ResourceManager.GetString("YOKAI_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hears and senses electronics within a 2.5 m radius.
+        /// </summary>
+        internal static string YOKAI_EV2 {
+            get {
+                return ResourceManager.GetString("YOKAI_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During a hunt, he hears the voices of players and senses their electronics only within a radius of up to 2.5 m from himself..
+        /// </summary>
+        internal static string YOKAI_EV2_D {
+            get {
+                return ResourceManager.GetString("YOKAI_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spawn close to the box.
+        /// </summary>
+        internal static string YOKAI_EV3 {
+            get {
+                return ResourceManager.GetString("YOKAI_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The radius of materialization from the box is 2.5 meters, instead of 5 meters.
+        /// </summary>
+        internal static string YOKAI_EV3_D {
+            get {
+                return ResourceManager.GetString("YOKAI_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yurei.
+        /// </summary>
+        internal static string YUREI {
+            get {
+                return ResourceManager.GetString("YUREI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doesn&apos;t leave the room when stoned.
+        /// </summary>
+        internal static string YUREI_EV1 {
+            get {
+                return ResourceManager.GetString("YUREI_EV1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you light incense near Yurei, he will not be able to leave the room for 60 seconds..
+        /// </summary>
+        internal static string YUREI_EV1_D {
+            get {
+                return ResourceManager.GetString("YUREI_EV1_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closes the doors.
+        /// </summary>
+        internal static string YUREI_EV2 {
+            get {
+                return ResourceManager.GetString("YUREI_EV2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slams the open door with a click outside the guest event (delay about 2 seconds), lowering the sanity of players within a radius of 7.5 m by 15%..
+        /// </summary>
+        internal static string YUREI_EV2_D {
+            get {
+                return ResourceManager.GetString("YUREI_EV2_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double door interaction.
+        /// </summary>
+        internal static string YUREI_EV3 {
+            get {
+                return ResourceManager.GetString("YUREI_EV3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can produce double interaction with a door outside of a guest event..
+        /// </summary>
+        internal static string YUREI_EV3_D {
+            get {
+                return ResourceManager.GetString("YUREI_EV3_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interacts with the front door.
+        /// </summary>
+        internal static string YUREI_EV4 {
+            get {
+                return ResourceManager.GetString("YUREI_EV4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The only ghost capable of interacting with the front door outside of paranormal activity..
+        /// </summary>
+        internal static string YUREI_EV4_D {
+            get {
+                return ResourceManager.GetString("YUREI_EV4_D", resourceCulture);
             }
         }
     }

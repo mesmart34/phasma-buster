@@ -3,7 +3,6 @@
 @using PhasmaBuster.Contracts
 @using PhasmaBuster.Data
 @using PhasmaBuster.Data.Common
-@using PhasmaBuster.Data.Evidences
 @using PhasmaBuster.Pages
 @inherits LayoutComponentBase
 
@@ -41,7 +40,7 @@
                     {
                         <RadzenPanelMenuItem Click="@(() => SelectEvidence(evidence))"
                                              title="@evidence.Description?.Text"
-                                             Icon="@(evidence is StandardEvidence standardEvidence ? standardEvidence.IconName: string.Empty)">
+                                             Icon="@(evidence.IconName)">
                             <Template>
                                 <div class="@(GetEvidenceCssClass(evidence))">
                                     @Localization[evidence.Name]
@@ -98,7 +97,7 @@
         await base.OnInitializedAsync();
     }
     
-    private async Task SelectEvidence(BaseEvidence evidence)
+    private async Task SelectEvidence(Evidence evidence)
     {
         _model.FilterEvidences[evidence] =
             (EvidenceState)((int)(_model.FilterEvidences[evidence] + 1) % Enum.GetValues<EvidenceState>().Length);
@@ -138,7 +137,7 @@
         NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
     
-    private string GetEvidenceCssClass(BaseEvidence evidence)
+    private string GetEvidenceCssClass(Evidence evidence)
     {
         switch (_model.FilterEvidences[evidence])
         {

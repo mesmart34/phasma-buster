@@ -1,269 +1,212 @@
-﻿import os
-import re
-from openpyxl import load_workbook
+﻿import re
+import pandas as pd
 
+prefix = 'PhasmaBusterTranslation'
 ghosts = []
-evidences = []
+evidences = dict()
+code = '''using System.Drawing;
+using PhasmaBuster.Data.Common;
+using PhasmaBuster.Pages;
+
+namespace PhasmaBuster.Data;
+
+public class Model
+{
+    public readonly Dictionary<Evidence, EvidenceState> FilterEvidences = new();
+	public readonly List<Evidence> Evidences;
+	public readonly List<Ghost> Ghosts;\n\n'''
+tabs = 0
 
 
-def convert_string(s):
-    # Convert the string to lower case and capitalize the first letter
+class Evidence:
+    def __init__(self):
+        name = ''
+        owner_name = ''
+        category = ''
+        filter_attribute = ''
+        color = ''
+        icon_name = ''
+        description_file_path = ''
+        description_type = ''
+
+
+class Ghost:
+    def __init__(self):
+        name = ''
+        standard_evidences = []
+        sanity = []
+        speed = []
+        blink = ''
+        required_evidences = []
+
+
+def convert_to_camel(s):
     s = s.lower().capitalize()
-
-    # Use regex to find patterns and replace them
-    s = re.sub(r'_(\d+)_', lambda x: x.group(1), s)  # Remove underscores around digits
-    s = re.sub(r'_([a-zA-Z])', lambda x: x.group(1).upper(), s)  # Remove underscore and capitalize the next letter
-
+    s = re.sub(r'_(\d+)_', lambda x: x.group(1), s)
+    s = re.sub(r'_([a-zA-Z])', lambda x: x.group(1).upper(), s)
     return s
 
 
-def generate_standard_evidences(sheet, row, header, class_code):
-    name = convert_string(sheet.cell(row, 1).value)
-    evidences.append(name)
-    class_code += f'\tprivate static readonly StandardEvidence {name} = new ()\n'
-    class_code += '\t{\n'
-    class_code += f'\t\t{sheet.cell(header, 1).value} = PhasmaBusterTranslation.{sheet.cell(row, 1).value},\n'
-    class_code += f'\t\t{sheet.cell(header, 2).value} = {sheet.cell(row, 2).value},\n'
-    class_code += f'\t\t{sheet.cell(header, 3).value} = EvidenceType.{sheet.cell(row, 3).value},\n'
-    class_code += f'\t\t{sheet.cell(header, 4).value} = Color.{sheet.cell(row, 4).value},\n'
-    class_code += f'\t\t{sheet.cell(header, 5).value} = "{sheet.cell(row, 5).value}"\n'
-    class_code += '\t};\n\n'
-    return class_code
+def push():
+    global tabs
+    tabs += 1
 
 
-def tab(code: str, tab_count):
-    result = ''
-    for i in range(tab_count):
-        result += '\t'
-    return result
+def pop():
+    global tabs
+    tabs -= 1
 
 
-def add_sanity(class_code, sheet, row):
-    class_code += '\t\tSanityEvidence = new ()\n'
-    class_code += '\t\t{\n'
-
-    class_code += f'\t\t\tName = PhasmaBusterTranslation.SANITY,\n'
-    class_code += f'\t\t\tValues = new()\n'
-    class_code += '\t\t\t{\n'
-    sanity_evidences = str(sheet.cell(row, 5).value).split(', ')
-    for sanity_evidence in sanity_evidences:
-        class_code += '\t\t\t\tnew()\n'
-        class_code += '\t\t\t\t{\n'
-        class_code += f'\t\t\t\t\tSequence = {sanity_evidences.index(sanity_evidence)},\n'
-        class_code += f'\t\t\t\t\tValue = {float(sanity_evidence)}m{(',\n' if sanity_evidences.index(sanity_evidence) < 2 else '\n')}'
-        class_code += f'\t\t\t\t}}{(',\n' if sanity_evidences.index(sanity_evidence) < len(sanity_evidences) - 1 else '\n')}'
-    class_code += '\t\t\t}\n'
-    class_code += '\t\t},\n'
-    return class_code
+def write(line='\n'):
+    global code
+    code += f'{'\t' * tabs}{line}{'\n'}'
 
 
-def add_speed(class_code, sheet, row):
-    class_code += '\t\tSpeedEvidence = new ()\n'
-    class_code += '\t\t{\n'
-
-    class_code += f'\t\t\tName = PhasmaBusterTranslation.SPEED,\n'
-    class_code += f'\t\t\tValues = new()\n'
-    class_code += '\t\t\t{\n'
-    sanity_evidences = str(sheet.cell(row, 6).value).split(', ')
-    for sanity_evidence in sanity_evidences:
-        class_code += '\t\t\t\tnew()\n'
-        class_code += '\t\t\t\t{\n'
-        class_code += f'\t\t\t\t\tSequence = {sanity_evidences.index(sanity_evidence)},\n'
-        class_code += f'\t\t\t\t\tValue = {float(sanity_evidence)}m\n'
-        class_code += f'\t\t\t\t}}{(',\n' if sanity_evidences.index(sanity_evidence) < len(sanity_evidences) - 1 else '\n')}'
-    class_code += '\t\t\t}\n'
-    class_code += '\t\t}\n'
-    return class_code
+def parse_evidences(evidences_sheet):
+    iter = evidences_sheet.iterrows()
+    for index, row in iter:
+        evidence = Evidence()
+        evidence.owner_name = row.iloc[0]
+        evidence.name = str(row.iloc[1])
+        evidence.category = row.iloc[2]
+        evidence.filter_attribute = row.iloc[3]
+        evidence.color = row.iloc[4]
+        evidence.icon_name = row.iloc[5]
+        evidence.description_type = row.iloc[6]
+        evidence.description_file_path = row.iloc[7]
+        evidences[evidence.name] = evidence
 
 
-def generate_hidden_evidences(sheet, class_code, row):
-    global raw_owner
-    class_code += '\t#region HiddenEvidences\n\n'
-    row += 2
-    while sheet.cell(row, 2).value is not None:
-        if sheet.cell(row, 1).value is not None:
-            raw_owner = sheet.cell(row, 1).value
-            owner = convert_string(raw_owner)
-        category = sheet.cell(row, 2).value + "_evidence"
-        sequence = int(sheet.cell(row, 3).value)
-        evidence_type = sheet.cell(row, 4).value
-        file_path = sheet.cell(row, 5).value
-        class_code += f'\tprivate static readonly {convert_string(category)} {f'{owner}Ev{sequence}'} = new ()\n'
-        class_code += '\t{\n'
-        class_code += f'\t\tName = PhasmaBusterTranslation.{raw_owner}_EV{sequence},\n'
-        class_code += f'\t\tDescription = new ()\n'
-        class_code += f'\t\t{{\n'
-        class_code += f'\t\t\tText = {f'PhasmaBusterTranslation.{raw_owner}_EV{sequence}_D'},\n'
-        if evidence_type is not None:
-            class_code += f'\t\t\tEvidenceDescriptionType = EvidenceDescriptionType.{evidence_type},\n'
-        if file_path is not None:
-            class_code += f'\t\t\tFilePath = "{file_path}",\n'
-        class_code += f'\t\t}},\n'
-        if sheet.cell(row, 2).value == 'BEHAVIOUR':
-            class_code += f'\t\tCategory = EvidenceType.Behaviours\n'
-        else:
-            class_code += f'\t\tCategory = EvidenceType.Tells\n'
-        class_code += '\t};\n\n'
-        row += 1
-    class_code += '\t#endregion\n\n'
-    return class_code
+def parse_ghosts(ghosts_sheet):
+    iter = ghosts_sheet.iterrows()
+    for index, row in iter:
+        ghost = Ghost()
+        ghost.name = row.iloc[0]
+        ghost.standard_evidences = str(row.iloc[1]).split(', ')
+        ghost.sanity = str(row.iloc[2]).split(', ')
+        ghost.speed = str(row.iloc[3]).split(', ')
+        ghost.blink = row.iloc[4]
+        ghost.required_evidence = str(row.iloc[5]).split(', ')
+        ghosts.append(ghost)
 
 
-def add_standard_evidences(class_code, sheet, row):
-    class_code += '\t\t{\n'
-    class_code += '\t\t\t{\n'
-    class_code += '\t\t\t\tEvidenceType.Standart,\n'
-    class_code += '\t\t\t\tnew ()\n'
-    class_code += '\t\t\t\t{\n'
-    standard_evidences = str(sheet.cell(row, 2).value).split(', ')
-    for standard_evidence in standard_evidences:
-        class_code += f'\t\t\t\t\t{convert_string(standard_evidence)}{(',\n' if standard_evidences.index(standard_evidence) < 2 else '\n')}'
-    class_code += '\t\t\t\t}\n'
-    class_code += '\t\t\t},'
-    return class_code
+def parse(file_path):
+    dfs = pd.read_excel(file_path, sheet_name=None)
+    parse_evidences(dfs['Evidences'])
+    parse_ghosts(dfs['Ghosts'])
 
 
-def add_tells_evidences(class_code, sheet, row, owner):
-    tells_evidences = str(sheet.cell(row, 3).value).split(', ')
-    if str(tells_evidences[0]) == 'None':
-        return class_code
-    class_code += f"""
-            {{
-                EvidenceType.Tells,
-                new ()
-                {{
-"""
-    
-    for tells_evidence in tells_evidences:
-        name = convert_string(f'{owner}_EV{tells_evidence}')
-        evidences.append(name)
-        class_code += f'\t\t\t\t\t{name}{(',\n' if tells_evidence.index(tells_evidence) < len(tells_evidence) else '\n')}'
-    class_code += f"""
-                }}
-            }},"""
-    return class_code
-
-
-def add_behaviour_evidences(class_code, sheet, row, owner):
-    behaviour_evidences = str(sheet.cell(row, 4).value).split(', ')
-    if str(behaviour_evidences[0]) == 'None':
-        return class_code
-    class_code += f"""
-            {{
-                EvidenceType.Behaviours,
-                new ()
-                {{
-"""
-
-    for behaviour_evidence in behaviour_evidences:
-        name = convert_string(f'{owner}_EV{behaviour_evidence}')
-        evidences.append(name)
-        class_code += f'\t\t\t\t\t{name}{(',\n' if behaviour_evidence.index(behaviour_evidence) < len(behaviour_evidence) else '\n')}'
-    class_code += f"""
-                }}
-            }}\n"""
-    return class_code
-
-
-def add_evidences(class_code, sheet, row, owner):
-    class_code += f'\t\tEvidences = new Dictionary<EvidenceType, List<BaseEvidence>>()\n'
-    class_code = add_standard_evidences(class_code, sheet, row)
-    class_code = add_tells_evidences(class_code, sheet, row, owner)
-    class_code = add_behaviour_evidences(class_code, sheet, row, owner)
-    class_code += '\t\t},\n'
-    return class_code
-
-
-def generate_ghost(sheet, row: int, class_code: str):
-    name = convert_string(sheet.cell(row, 1).value)
-    ghosts.append(name)
-    class_code += f'\tprivate static readonly Ghost {name} = new ()\n'
-    class_code += '\t{\n'
-    class_code += f'\t\t{sheet.cell(1, 1).value} = PhasmaBusterTranslation.{sheet.cell(row, 1).value},\n'
-    class_code = add_evidences(class_code, sheet, row, sheet.cell(row, 1).value)
-    class_code = add_sanity(class_code, sheet, row)
-    class_code = add_speed(class_code, sheet, row)
-
-    class_code += '\t};\n\n'
-    return class_code
-
-
-def parse_standard_evidences(class_code, wb):
-    sheet = wb['Evidences']
-    header = 2
-    row = 3
-    class_code += '\t#region StandardEvidence\n\n'
-    while row < 10:
-        if sheet.cell(row, 1).value is None:
-            break
-        class_code = generate_standard_evidences(sheet, row, header, class_code)
-        row += 1
-    class_code += '\t#endregion\n\n'
-    row += 1
-    class_code = generate_hidden_evidences(sheet, class_code, row)
-    return class_code
-
-
-def parse_ghosts(class_code, wb):
-    class_code += '\t#region Ghosts\n\n'
-    sheet = wb['Ghosts']
-    row = 2
-    while True:
-        if sheet.cell(row, 1).value is None:
-            break
-        class_code = generate_ghost(sheet, row, class_code)
-        row += 1
-    class_code += '\t#endregion\n\n'
-    return class_code
-
-
-def main():
-    class_code = 'using System.Drawing;\n'
-    class_code += 'using PhasmaBuster.Data.Common;\n'
-    class_code += 'using PhasmaBuster.Data.Evidences;\n'
-    class_code += 'using PhasmaBuster.Pages;\n\n'
-    class_code += 'namespace PhasmaBuster.Data;\n\n'
-    class_name = 'Model'
-    class_code += f"public class {class_name}\n"
-    class_code += '{\n'
-
-    class_code += '\tpublic readonly Dictionary<BaseEvidence, EvidenceState> FilterEvidences = new();\n'
-    class_code += '\tpublic readonly List<BaseEvidence> Evidences;\n'
-    class_code += '\tpublic readonly List<Ghost> Ghosts;\n\n'
-
-    wb = load_workbook('data.xlsx')
-
-    class_code = parse_standard_evidences(class_code, wb)
-    class_code = parse_ghosts(class_code, wb)
-
-    class_code += '\tpublic Model()\n'
-    class_code += '\t{\n'
-
-    class_code += '\t\tEvidences = new()\n'
-    class_code += '\t\t{\n'
-    for evidence in evidences:
-        class_code += f'\t\t\t{evidence},\n'
-    class_code += '\t\t};\n'
-
-    class_code += '\t\tGhosts = new()\n'
-    class_code += '\t\t{\n'
+def write_ghosts():
+    evs = list(evidences.values())
     for ghost in ghosts:
-        class_code += f'\t\t\t{ghost},\n'
-    class_code += '\t\t};\n'
+        behaviours = list(filter(lambda x: x.category == 'BEHAVIOURS' and x.name.startswith(ghost.name), evs))
+        tells = list(filter(lambda x: x.category == 'TELLS' and x.name.startswith(ghost.name), evs))
+        write(f'private static readonly Ghost {convert_to_camel(ghost.name)} = new()')
+        write('{')
+        push()
+        write(f'Name = {prefix}.{ghost.name},')
+        write('Evidences = new Dictionary<EvidenceType, List<Evidence>>()')
+        write('{')
+        push()
+        write('{')
+        push()
+        write(f'EvidenceType.Standard,')
+        write('[')
+        push()
+        for index, se in enumerate(ghost.standard_evidences):
+            name = convert_to_camel(se)
+            write(f'{name}{',' if index < len(ghost.standard_evidences) - 1 else ''}')
+        pop()
+        write(']')
+        pop()
+        write('},')
+        if len(behaviours) > 0:
+            write('{')
+            push()
+            write(f'EvidenceType.Behaviours,')
+            write(f'[')
+            push()
+            for index, ev in enumerate(behaviours):
+                write(f'{convert_to_camel(ev.name)}{',' if index < len(behaviours) - 1 else ''}')
+            pop()
+            write(']')
+            pop()
+            write('},')
+        if len(tells) > 0:
+            write('{')
+            push()
+            write(f'EvidenceType.Tells,')
+            write(f'[')
+            push()
+            for index, ev in enumerate(tells):
+                write(f'{convert_to_camel(ev.name)}{',' if index < len(tells) - 1 else ''}')
+            pop()
+            write(']')
+            pop()
+            write('}')
+        pop()
+        write('},')
+        pop()
+        write('};\n')
 
-    class_code += '\t\tforeach (var baseEvidence in Evidences)\n'
-    class_code += '\t\t{\n'
-    class_code += '\t\t\tFilterEvidences.Add(baseEvidence, EvidenceState.Idle);\n'
-    class_code += '\t\t}\n'
 
-    class_code += '\t}\n'
-
-    class_code += '}\n'
-    output_file = f"{class_name}.cs"
-    with open(output_file, 'w') as file:
-        file.write(class_code)
-    return
+def write_evidences():
+    for evidence in evidences.values():
+        write(f'private static readonly Evidence {convert_to_camel(evidence.name)} = new()')
+        write('{')
+        push()
+        write(f'Name = {prefix}.{evidence.name},')
+        if evidence.owner_name != 'ALL':
+            write(f'Description = new()')
+            write('{')
+            push()
+            write(f'Text = {prefix}.{evidence.name}_D,')
+            if str(evidence.description_type) != 'nan':
+                write(f'EvidenceDescriptionType = EvidenceDescriptionType.{evidence.description_type},')
+            if str(evidence.description_file_path) != 'nan':
+                write(f'FilePath = "{evidence.description_file_path}",')
+            pop()
+            write('},')
+        if str(evidence.icon_name) != 'nan':
+            write(f'IconName = "{evidence.icon_name}",')
+        if str(evidence.color) != 'nan':
+            write(f'Color = Color.{evidence.color},')
+        write(f'Category = EvidenceType.{convert_to_camel(evidence.category)}')
+        pop()
+        write('};\n')
 
 
 if __name__ == "__main__":
-    main()
+    parse('data.xlsx')
+    push()
+    write_evidences()
+    write_ghosts()
+    write('public Model()')
+    write('{')
+    push()
+    write('Evidences = new()')
+    write('{')
+    push()
+    for index, ev in enumerate(evidences.keys()):
+        write(f'{convert_to_camel(ev)}{',' if index < len(evidences.keys()) else ''}')
+    pop()
+    write('};')
+    write()
+    write('Ghosts = new()')
+    write('{')
+    push()
+    for index, ghost in enumerate(ghosts):
+        write(f'{convert_to_camel(ghost.name)}{',' if index < len(ghosts) else ''}')
+    pop()
+    write('};')
+    write('''foreach (var baseEvidence in Evidences)
+		{
+            FilterEvidences.Add(baseEvidence, EvidenceState.Idle);
+        }''')
+    pop()
+    write('}')
+    pop()
+    write('}')
+    output_file = f"Data/Model.cs"
+    with open(output_file, 'w') as file:
+        file.write(code)
