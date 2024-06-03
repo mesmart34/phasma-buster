@@ -42,9 +42,10 @@
                         {
                             <RadzenPanelMenuItem Click="@(() => SelectEvidence(evidence))"
                                                  title="@evidence.Description?.Text"
-                                                 Icon="@(evidence.IconName)">
+                                                 class="noselect"
+                                                 Icon="@evidence.IconName">
                                 <Template>
-                                    <div class="@(GetEvidenceCssClass(evidence))">
+                                    <div class="@(GetEvidenceCssClass(evidence))" style="user-select: none;">
                                         @Localization[evidence.Name]
                                     </div>
                                 </Template>
