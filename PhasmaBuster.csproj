@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <AssemblyName>PhasmaBuster</AssemblyName>
         <RootNamespace>PhasmaBuster</RootNamespace>
+        <ResXFileCodeGenerator_PublicClass>true</ResXFileCodeGenerator_PublicClass>
         <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
 
@@ -18,9 +19,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <EmbeddedResource Update="Pages\PhasmaBusterTranslation.en.resx">
+        <DependentUpon>PhasmaBusterTranslation.resx</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Pages\PhasmaBusterTranslation.ru.resx">
+        <DependentUpon>PhasmaBusterTranslation.resx</DependentUpon>
+      </EmbeddedResource>
       <EmbeddedResource Update="Pages\PhasmaBusterTranslation.resx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>PhasmaBusterTranslation.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
