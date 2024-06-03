@@ -22,9 +22,12 @@
                             <div class="my-auto w-100 d-flex justify-content-center">
                                 @foreach (var evidence in modelGhost.Evidences[EvidenceType.Standard])
                                 {
-                                    <RadzenIcon Icon="@(evidence.IconName)"
-                                                class="mx-2"
-                                                title="@Localization[evidence.Name]"/>
+                                    if (evidence.Name != null)
+                                    {
+                                        <RadzenIcon Icon="@(evidence.IconName)"
+                                                    class="mx-2"
+                                                    title="@Localization[evidence.Name]"/>
+                                    }
                                 }
                             </div>
                             <RadzenPanel class="my-auto">

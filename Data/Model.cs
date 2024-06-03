@@ -911,6 +911,8 @@ public class Model
 	private static readonly Ghost Spirit = new()
 	{
 		Name = PhasmaBusterTranslation.SPIRIT,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -933,6 +935,8 @@ public class Model
 	private static readonly Ghost Wraith = new()
 	{
 		Name = PhasmaBusterTranslation.WRAITH,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -961,6 +965,8 @@ public class Model
 	private static readonly Ghost Phantom = new()
 	{
 		Name = PhasmaBusterTranslation.PHANTOM,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -990,6 +996,8 @@ public class Model
 	private static readonly Ghost Poltergeist = new()
 	{
 		Name = PhasmaBusterTranslation.POLTERGEIST,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1020,6 +1028,8 @@ public class Model
 	private static readonly Ghost Banshee = new()
 	{
 		Name = PhasmaBusterTranslation.BANSHEE,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1052,6 +1062,8 @@ public class Model
 	private static readonly Ghost Jinn = new()
 	{
 		Name = PhasmaBusterTranslation.JINN,
+		SpeedValues = [1.7m, 2.5m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1080,6 +1092,8 @@ public class Model
 	private static readonly Ghost Mare = new()
 	{
 		Name = PhasmaBusterTranslation.MARE,
+		SpeedValues = [1.7m],
+		SanityValues = [40m, 60m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1111,6 +1125,8 @@ public class Model
 	private static readonly Ghost Revenant = new()
 	{
 		Name = PhasmaBusterTranslation.REVENANT,
+		SpeedValues = [1.0m, 3.0m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1133,6 +1149,8 @@ public class Model
 	private static readonly Ghost Shadow = new()
 	{
 		Name = PhasmaBusterTranslation.SHADOW,
+		SpeedValues = [1.7m],
+		SanityValues = [35m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1160,6 +1178,8 @@ public class Model
 	private static readonly Ghost Demon = new()
 	{
 		Name = PhasmaBusterTranslation.DEMON,
+		SpeedValues = [1.7m],
+		SanityValues = [70m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1190,6 +1210,8 @@ public class Model
 	private static readonly Ghost Yurei = new()
 	{
 		Name = PhasmaBusterTranslation.YUREI,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1220,6 +1242,8 @@ public class Model
 	private static readonly Ghost Oni = new()
 	{
 		Name = PhasmaBusterTranslation.ONI,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1243,6 +1267,8 @@ public class Model
 	private static readonly Ghost Yokai = new()
 	{
 		Name = PhasmaBusterTranslation.YOKAI,
+		SpeedValues = [1.7m],
+		SanityValues = [80m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1267,6 +1293,9 @@ public class Model
 	private static readonly Ghost Hantu = new()
 	{
 		Name = PhasmaBusterTranslation.HANTU,
+		RequiredStandardEvidences = [Freezing],
+		SpeedValues = [1.4m, 1.75m, 2.1m, 2.3m, 2.5m, 2.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1292,6 +1321,9 @@ public class Model
 	private static readonly Ghost Goryo = new()
 	{
 		Name = PhasmaBusterTranslation.GORYO,
+		RequiredStandardEvidences = [Dots],
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1317,6 +1349,8 @@ public class Model
 	private static readonly Ghost Myling = new()
 	{
 		Name = PhasmaBusterTranslation.MYLING,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1340,6 +1374,8 @@ public class Model
 	private static readonly Ghost Onryo = new()
 	{
 		Name = PhasmaBusterTranslation.ONRYO,
+		SpeedValues = [1.7m],
+		SanityValues = [60m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1369,6 +1405,8 @@ public class Model
 	private static readonly Ghost TheTwins = new()
 	{
 		Name = PhasmaBusterTranslation.THE_TWINS,
+		SpeedValues = [1.53m, 1.87m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1401,6 +1439,8 @@ public class Model
 	private static readonly Ghost Raiju = new()
 	{
 		Name = PhasmaBusterTranslation.RAIJU,
+		SpeedValues = [1.7m, 2.5m],
+		SanityValues = [65m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1425,6 +1465,9 @@ public class Model
 	private static readonly Ghost Obake = new()
 	{
 		Name = PhasmaBusterTranslation.OBAKE,
+		RequiredStandardEvidences = [Ultraviolet],
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1456,6 +1499,9 @@ public class Model
 	private static readonly Ghost Mimic = new()
 	{
 		Name = PhasmaBusterTranslation.MIMIC,
+		RequiredStandardEvidences = [GhostOrbs],
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1485,6 +1531,8 @@ public class Model
 	private static readonly Ghost Moroi = new()
 	{
 		Name = PhasmaBusterTranslation.MOROI,
+		SpeedValues = [1.7m],
+		SanityValues = [50m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1510,6 +1558,9 @@ public class Model
 	private static readonly Ghost Deogen = new()
 	{
 		Name = PhasmaBusterTranslation.DEOGEN,
+		RequiredStandardEvidences = [SpiritBox],
+		SpeedValues = [0.4m, 3.0m],
+		SanityValues = [40m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{
@@ -1535,6 +1586,8 @@ public class Model
 	private static readonly Ghost Thaye = new()
 	{
 		Name = PhasmaBusterTranslation.THAYE,
+		SpeedValues = [1.7m],
+		SanityValues = [75m],
 		Evidences = new Dictionary<EvidenceType, List<Evidence>>()
 		{
 			{

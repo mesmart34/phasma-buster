@@ -38,15 +38,18 @@
                 <RadzenPanelMenuItem Text="@Localization[evidenceGroup.Key.GetCaption()]" Icon="home">
                     @foreach (var evidence in evidenceGroup.Value)
                     {
-                        <RadzenPanelMenuItem Click="@(() => SelectEvidence(evidence))"
-                                             title="@evidence.Description?.Text"
-                                             Icon="@(evidence.IconName)">
-                            <Template>
-                                <div class="@(GetEvidenceCssClass(evidence))">
-                                    @Localization[evidence.Name]
-                                </div>
-                            </Template>
-                        </RadzenPanelMenuItem>
+                        if (evidence.Name != null)
+                        {
+                            <RadzenPanelMenuItem Click="@(() => SelectEvidence(evidence))"
+                                                 title="@evidence.Description?.Text"
+                                                 Icon="@(evidence.IconName)">
+                                <Template>
+                                    <div class="@(GetEvidenceCssClass(evidence))">
+                                        @Localization[evidence.Name]
+                                    </div>
+                                </Template>
+                            </RadzenPanelMenuItem>
+                        }
                     }
                 </RadzenPanelMenuItem>
             }

@@ -404,9 +404,6 @@
     <data name="MYLING_EV1_D" xml:space="preserve">
         <value>Makes sounds more often into a directional microphone than other ghosts</value>
     </data>
-    <data name="MYLING_EV1_D" xml:space="preserve">
-        <value>Makes sounds more often into a directional microphone than other ghosts</value>
-    </data>
     <data name="MYLING_EV2" xml:space="preserve">
         <value>Talks a lot into the microphone</value>
     </data>
@@ -586,12 +583,18 @@ Activity at the start (interactions and paranormal events) is 200%. For each agi
         <value />
     </data>
     <data name="WRAITH_EV1" xml:space="preserve">
-        <value />
+        <value>Salt footprints</value>
     </data>
     <data name="MIMIC_EV1" xml:space="preserve">
         <value />
     </data>
     <data name="SPIRIT" xml:space="preserve">
         <value>Spirit</value>
+    </data>
+    <data name="WRAITH_EV1_D" xml:space="preserve">
+        <value>Wraith never leaves salt footprints</value>
+    </data>
+    <data name="SPIRIT_EV1" xml:space="preserve">
+        <value>Delay after smudge</value>
     </data>
 </root>

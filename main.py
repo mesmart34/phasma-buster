@@ -37,7 +37,7 @@ class Ghost:
         sanity = []
         speed = []
         blink = ''
-        required_evidences = []
+        required_evidence = ''
 
 
 def convert_to_camel(s):
@@ -84,9 +84,9 @@ def parse_ghosts(ghosts_sheet):
         ghost.name = row.iloc[0]
         ghost.standard_evidences = str(row.iloc[1]).split(', ')
         ghost.sanity = str(row.iloc[2]).split(', ')
-        ghost.speed = str(row.iloc[3]).split(', ')
+        ghost.speed = [float(x) for x in str(row.iloc[3]).split(', ')]
         ghost.blink = row.iloc[4]
-        ghost.required_evidence = str(row.iloc[5]).split(', ')
+        ghost.required_evidence = row.iloc[5]
         ghosts.append(ghost)
 
 
@@ -105,6 +105,10 @@ def write_ghosts():
         write('{')
         push()
         write(f'Name = {prefix}.{ghost.name},')
+        if str(ghost.required_evidence) != 'nan':
+            write(f'RequiredStandardEvidences = [{convert_to_camel(ghost.required_evidence)}],')
+        write(f'SpeedValues = [{', '.join(f'{x}m' for x in ghost.speed)}],')
+        write(f'SanityValues = [{', '.join(f'{x}m' for x in ghost.sanity)}],')
         write('Evidences = new Dictionary<EvidenceType, List<Evidence>>()')
         write('{')
         push()
