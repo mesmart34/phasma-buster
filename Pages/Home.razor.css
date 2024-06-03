@@ -2,3 +2,89 @@
 {
     height: 10rem;
 }
+
+.grid
+{
+    display: grid;
+    container-type: inline-size;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    grid-auto-rows: min-content;
+    gap: 1rem; 
+    overflow-y: auto;
+}
+
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: "Noto Sans JP", sans-serif;
+    letter-spacing: 2px;
+}
+
+. {
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    justofy-content: center;
+    align-items: center;
+}
+
+.win-grid {
+    border: 0px solid white;
+    letter-spacing: 2px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: stretch;
+    text-align: center;
+    grid-gap: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    /*padding: 5rem;*/
+    width: 100%;
+    height: 100%;
+}
+
+.win-btn {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*padding: 0rem;*/
+    text-align: center;
+    border: none;
+    /*padding: 1rem;*/
+    background: transparent;
+    color: white;
+    border: 3px solid transparent;
+}
+
+.ghost-radius
+{
+    border-radius: 2rem;
+}
+
+.ghost-background
+{
+    background: linear-gradient(rgb(34, 37, 41) 0px, rgb(34, 37, 41) 0px) content-box;
+}
+
+::deep .panel
+{
+    background: transparent;box-shadow: none;
+}
+
+::deep .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.description-text
+{
+    color: rgba(255,255,255,0.7);
+}

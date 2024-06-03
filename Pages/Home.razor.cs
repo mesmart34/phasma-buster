@@ -1,11 +1,9 @@
-using System.Globalization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
 using PhasmaBuster.Common;
 using PhasmaBuster.Data;
 using PhasmaBuster.Data.Common;
-using PhasmaBuster.Data.Evidences;
 using Radzen;
 
 namespace PhasmaBuster.Pages;
@@ -57,8 +55,13 @@ public partial class Home
         {
             visible &= !ghost.HasEvidence(evidence);
         }
-
-        ;
+        
         return visible;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Js.InvokeVoidAsync("setButtonsLikeWindows");
+        await base.OnAfterRenderAsync(firstRender);
     }
 }

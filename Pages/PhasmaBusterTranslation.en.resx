@@ -11,61 +11,590 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="EMF5" xml:space="preserve">
-        <value>EMF 5</value>
-    </data>
-    <data name="GHOST_ORBS" xml:space="preserve">
-        <value>Ghost Orbs</value>
-    </data>
-    <data name="ULTRAVIOLET" xml:space="preserve">
-        <value>Ultraviolet</value>
-    </data>
-    <data name="DOTS" xml:space="preserve">
-        <value>DOTs</value>
-    </data>
-    <data name="FREEZING" xml:space="preserve">
-        <value>Freezing</value>
-    </data>
-    <data name="WRITING" xml:space="preserve">
-        <value>Writing</value>
-    </data>
-    <data name="SPIRIT_BOX" xml:space="preserve">
-        <value>Spirit Box</value>
-    </data>
-    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
-        <value>A player can hear the unique scream through Parabolic Microphone</value>
-    </data>
-    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
-        <value>Parabolic Microphone scream</value>
-    </data>
-    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
-        <value>Wraith never leaves footprints on salt</value>
-    </data>
-    <data name="SALT_FOOTPRINTS" xml:space="preserve">
-        <value>Salt footprints</value>
-    </data>
-    <data name="TELLS" xml:space="preserve">
-        <value>Tells</value>
-    </data>
-    <data name="STANDART" xml:space="preserve">
-        <value>Standart</value>
+    <data name="ABILITIES" xml:space="preserve">
+        <value>Abilities</value>
     </data>
     <data name="BANSHEE" xml:space="preserve">
         <value>Banshee</value>
     </data>
-    <data name="WRAITH" xml:space="preserve">
-        <value>Wraith</value>
+    <data name="BANSHEE_EV1" xml:space="preserve">
+        <value>Scream into the microphone</value>
+    </data>
+    <data name="BANSHEE_EV1_D" xml:space="preserve">
+        <value>With a chance (25%) emits a unique sound into a directed microphone.</value>
+    </data>
+    <data name="BANSHEE_EV2" xml:space="preserve">
+        <value>Singing</value>
+    </data>
+    <data name="BANSHEE_EV2_D" xml:space="preserve">
+        <value>Has an increased chance of a singing ghost event.</value>
+    </data>
+    <data name="BANSHEE_EV3" xml:space="preserve">
+        <value>Decrease in sanity upon touch</value>
+    </data>
+    <data name="BANSHEE_EV3_D" xml:space="preserve">
+        <value>The target will lose 15% sanity if they touch the ghost during a singing ghost event (the event must be directed at the target, not another player).</value>
+    </data>
+    <data name="BANSHEE_EV4" xml:space="preserve">
+        <value>Observes the sanity of the target</value>
+    </data>
+    <data name="BANSHEE_EV4_D" xml:space="preserve">
+        <value>The Banshee's hunt is influenced only by the target's percentage sanity, not the team's overall sanity.</value>
+    </data>
+    <data name="BANSHEE_EV5" xml:space="preserve">
+        <value>Target pursuit</value>
+    </data>
+    <data name="BANSHEE_EV5_D" xml:space="preserve">
+        <value>Only pursue the selected target during the hunt. (If the target is outside the location, the Banshee will behave like a regular ghost).</value>
+    </data>
+    <data name="BANSHEE_EV6" xml:space="preserve">
+        <value>Hunt begins only after proximity.</value>
     </data>
     <data name="BEHAVIOUR" xml:space="preserve">
         <value>Behaviour</value>
     </data>
+    <data name="DEMON" xml:space="preserve">
+        <value>Demon</value>
+    </data>
+    <data name="DEMON_EV1" xml:space="preserve">
+        <value>Delay in hunting after smudging</value>
+    </data>
+    <data name="DEMON_EV1_D" xml:space="preserve">
+        <value>If you light sage near a Demon, it cannot begin hunting for the next 60 seconds.</value>
+    </data>
+    <data name="DEMON_EV2" xml:space="preserve">
+        <value>Short interval between hunts</value>
+    </data>
+    <data name="DEMON_EV2_D" xml:space="preserve">
+        <value>The minimum interval between attacks is 20 seconds (25 seconds for other ghosts).</value>
+    </data>
+    <data name="DEMON_EV3" xml:space="preserve">
+        <value>Increased crusifix radius</value>
+    </data>
+    <data name="DEMON_EV3_D" xml:space="preserve">
+        <value>The range of the Crucifix is increased by 50% (4.5m, 6m, and 7.5m respectively).</value>
+    </data>
+    <data name="DEMON_EV4" xml:space="preserve">
+        <value>Hunts anytime</value>
+    </data>
+    <data name="DEMON_EV4_D" xml:space="preserve">
+        <value>Hunts with any sanity level</value>
+    </data>
+    <data name="DOTS" xml:space="preserve">
+        <value>DOTs</value>
+    </data>
+    <data name="EMF5" xml:space="preserve">
+        <value>EMF 5</value>
+    </data>
+    <data name="FREEZING" xml:space="preserve">
+        <value>Freezing</value>
+    </data>
+    <data name="GHOST_ORBS" xml:space="preserve">
+        <value>Ghost Orbs</value>
+    </data>
     <data name="HUNT_SANITY" xml:space="preserve">
         <value>Hunt and sanity</value>
+    </data>
+    <data name="JINN" xml:space="preserve">
+        <value>Jinn</value>
+    </data>
+    <data name="JINN_EV1" xml:space="preserve">
+        <value>Does not turn off the breaker</value>
+    </data>
+    <data name="JINN_EV1_D" xml:space="preserve">
+        <value>Never turns off the breaker. (Do not confuse with overload caused by a large number of lights turned on)</value>
+    </data>
+    <data name="JINN_EV2" xml:space="preserve">
+        <value>Lowers sanity within 3 meters of itself when the breaker is on.</value>
+    </data>
+    <data name="JINN_EV2_D" xml:space="preserve">
+        <value>Burns 25% of sanity for all players within 3 meters of itself if the breaker is on; also, an EMF reading appears on the breaker.</value>
+    </data>
+    <data name="MARE" xml:space="preserve">
+        <value>Mare</value>
+    </data>
+    <data name="MARE_EV1" xml:space="preserve">
+        <value>Does not turn on lights</value>
+    </data>
+    <data name="MARE_EV1_D" xml:space="preserve">
+        <value>The Mare never turns on lights but instead has an increased chance to turn them off.</value>
+    </data>
+    <data name="MARE_EV2" xml:space="preserve">
+        <value>Smashes light bulbs</value>
+    </data>
+    <data name="MARE_EV2_D" xml:space="preserve">
+        <value>The Mare has an increased chance of a ghost event involving smashing light bulbs.</value>
+    </data>
+    <data name="MARE_EV3" xml:space="preserve">
+        <value>Walks into dark rooms</value>
+    </data>
+    <data name="MARE_EV3_D" xml:space="preserve">
+        <value>It has an increased chance of wandering from a lit room into a dark one</value>
+    </data>
+    <data name="MARE_EV4" xml:space="preserve">
+        <value>Instantly turns off the lights</value>
+    </data>
+    <data name="MARE_EV4_D" xml:space="preserve">
+        <value>Instantly turns off the lights (switch) that the player has just turned on (no more than once every 10 seconds)</value>
+    </data>
+    <data name="MARE_EV5" xml:space="preserve">
+        <value>Turns off the lights during a ghost event</value>
+    </data>
+    <data name="MARE_EV5_D" xml:space="preserve">
+        <value>Can turn off the lights during a paranormal event, not just before its onset.</value>
+    </data>
+    <data name="PHANTOM" xml:space="preserve">
+        <value>Phantom</value>
+    </data>
+    <data name="PHANTOM_EV1" xml:space="preserve">
+        <value>Disappearance after photo</value>
+    </data>
+    <data name="PHANTOM_EV1_D" xml:space="preserve">
+        <value>If you photograph it during a ghost event (or on the summoning circle, music box), it will disappear immediately after the flash, the electronics will stop malfunctioning, and the heartbeat will stop, but the event will continue. There will be no interference in the photo and no ghost. (If you photograph it during an attack, there will also be no interference and no ghost in the photo).</value>
+    </data>
+    <data name="PHANTOM_EV2" xml:space="preserve">
+        <value>EMF during the chase</value>
+    </data>
+    <data name="PHANTOM_EV2_D" xml:space="preserve">
+        <value>Approach a random player, and in the place where it arrives, you will get an EMF reading. The attack will not begin until it reaches its destination.</value>
+    </data>
+    <data name="PHANTOM_EV3" xml:space="preserve">
+        <value>Lowers sanity within 10 meters of itself.</value>
+    </data>
+    <data name="PHANTOM_EV3_D" xml:space="preserve">
+        <value>Being within 10 meters of the Phantom decreases the player's sanity at a rate of 0.4-0.5% per second.</value>
+    </data>
+    <data name="POLTERGEIST" xml:space="preserve">
+        <value>Poltergeist</value>
+    </data>
+    <data name="POLTERGEIST_EV1" xml:space="preserve">
+        <value>Strong throw</value>
+    </data>
+    <data name="POLTERGEIST_EV1_D" xml:space="preserve">
+        <value>Can throw objects with greater force than other ghosts.</value>
+    </data>
+    <data name="POLTERGEIST_EV2" xml:space="preserve">
+        <value>Throws objects during hunts</value>
+    </data>
+    <data name="POLTERGEIST_EV2_D" xml:space="preserve">
+        <value>During hunts, it has a 100% chance to throw an object every 0.5 seconds.</value>
+    </data>
+    <data name="POLTERGEIST_EV3" xml:space="preserve">
+        <value>Decreases sanity due to throwing objects.</value>
+    </data>
+    <data name="POLTERGEIST_EV3_D" xml:space="preserve">
+        <value>For each object thrown by the poltergeist, 2% of sanity is deducted from those who witnessed the throw.</value>
+    </data>
+    <data name="POLTERGEIST_EV4" xml:space="preserve">
+        <value>Multiple throws</value>
+    </data>
+    <data name="POLTERGEIST_EV4_D" xml:space="preserve">
+        <value>Can throw multiple objects simultaneously.</value>
+    </data>
+    <data name="REVENANT" xml:space="preserve">
+        <value>Revenant</value>
+    </data>
+    <data name="REVENANT_EV1" xml:space="preserve">
+        <value>Slower when not in sight of a player</value>
+    </data>
+    <data name="REVENANT_EV1_D" xml:space="preserve">
+        <value>The Revenant moves at a speed of 1 m/s when it cannot see or hear players and does not sense their electronics.</value>
+    </data>
+    <data name="SHADOW" xml:space="preserve">
+        <value>Shadow</value>
+    </data>
+    <data name="SHADOW_EV1" xml:space="preserve">
+        <value>Does not interact when players are present</value>
+    </data>
+    <data name="SHADOW_EV1_D" xml:space="preserve">
+        <value>If at least one player is in the room with the Shade, it ceases to interact with the environment (except for candles).</value>
+    </data>
+    <data name="SHADOW_EV2" xml:space="preserve">
+        <value>Does not hunt when players are present.</value>
+    </data>
+    <data name="SHADOW_EV2_D" xml:space="preserve">
+        <value>The Shade cannot initiate an attack in a room with a player.</value>
+    </data>
+    <data name="SHADOW_EV3" xml:space="preserve">
+        <value>Shade during ghost events</value>
+    </data>
+    <data name="SHADOW_EV3_D" xml:space="preserve">
+        <value>During ghost events, the Shade is more likely to appear in its shadow form.</value>
+    </data>
+    <data name="SHADOW_EV4" xml:space="preserve">
+        <value>Smoke model during ghost events</value>
+    </data>
+    <data name="SHADOW_EV4_D" xml:space="preserve">
+        <value>High chance of a ghost event taking the form of a mist.</value>
+    </data>
+    <data name="SHADOW_EV5" xml:space="preserve">
+        <value>Shadow form when using cursed items</value>
+    </data>
+    <data name="SHADOW_EV5_D" xml:space="preserve">
+        <value>The Shade is the only ghost that, when using the Ouija board or spirit box, can appear in its shadow form.</value>
+    </data>
+    <data name="SHADOW_EV6" xml:space="preserve">
+        <value>Does not trigger a ghost event at 100% sanity</value>
+    </data>
+    <data name="SHADOW_EV6_D" xml:space="preserve">
+        <value>With each percentage of total sanity lost, the Shade increases its chance of manifesting a paranormal event by 2%.</value>
     </data>
     <data name="SPEED" xml:space="preserve">
         <value>Speed</value>
     </data>
-    <data name="ABILITIES" xml:space="preserve">
-        <value>Abilities</value>
+    <data name="SPIRIT_BOX" xml:space="preserve">
+        <value>Spirit Box</value>
+    </data>
+    <data name="STANDART" xml:space="preserve">
+        <value>Standart</value>
+    </data>
+    <data name="TELLS" xml:space="preserve">
+        <value>Tells</value>
+    </data>
+    <data name="ULTRAVIOLET" xml:space="preserve">
+        <value>Ultraviolet</value>
+    </data>
+    <data name="WRITING" xml:space="preserve">
+        <value>Writing</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM" xml:space="preserve">
+        <value>Parabolic Microphone scream</value>
+    </data>
+    <data name="PARABOLIC_MIC_SCREAM_DSCR" xml:space="preserve">
+        <value>A player can hear the unique scream through Parabolic Microphone</value>
+    </data>
+    <data name="SALT_FOOTPRINTS" xml:space="preserve">
+        <value>Salt footprints</value>
+    </data>
+    <data name="SALT_FOOTPRINTS_DSCR" xml:space="preserve">
+        <value>Wraith never leaves footprints on salt</value>
+    </data>
+    <data name="WRAITH" xml:space="preserve">
+        <value>Wraith</value>
+    </data>
+    <data name="SANITY" xml:space="preserve">
+        <value>Sanity</value>
+    </data>
+    <data name="BANSHEE_EV6_D" xml:space="preserve">
+        <value>Outside of the hunt, the Banshee can go to its target, and then return to the room until the Banshee reaches its destination and the hunt begins. (P.S. The Banshee cannot reach its target if it is on another floor)</value>
+    </data>
+    <data name="YUREI" xml:space="preserve">
+        <value>Yurei</value>
+    </data>
+    <data name="YUREI_EV1" xml:space="preserve">
+        <value>Doesn't leave the room when stoned</value>
+    </data>
+    <data name="YUREI_EV1_D" xml:space="preserve">
+        <value>If you light incense near Yurei, he will not be able to leave the room for 60 seconds.</value>
+    </data>
+    <data name="YUREI_EV2" xml:space="preserve">
+        <value>Closes the doors</value>
+    </data>
+    <data name="YUREI_EV2_D" xml:space="preserve">
+        <value>Slams the open door with a click outside the guest event (delay about 2 seconds), lowering the sanity of players within a radius of 7.5 m by 15%.</value>
+    </data>
+    <data name="YUREI_EV3" xml:space="preserve">
+        <value>Double door interaction</value>
+    </data>
+    <data name="YUREI_EV3_D" xml:space="preserve">
+        <value>Can produce double interaction with a door outside of a guest event.</value>
+    </data>
+    <data name="YUREI_EV4" xml:space="preserve">
+        <value>Interacts with the front door</value>
+    </data>
+    <data name="YUREI_EV4_D" xml:space="preserve">
+        <value>The only ghost capable of interacting with the front door outside of paranormal activity.</value>
+    </data>
+    <data name="ONI" xml:space="preserve">
+        <value>Oni</value>
+    </data>
+    <data name="ONI_EV1" xml:space="preserve">
+        <value>Removes 20% Sanity</value>
+    </data>
+    <data name="ONI_EV1_D" xml:space="preserve">
+        <value>During paranormal events, removes 20% of sanity, instead of the standard 10%.</value>
+    </data>
+    <data name="ONI_EV2" xml:space="preserve">
+        <value>Doesn't call air ball</value>
+    </data>
+    <data name="ONI_EV2_D" xml:space="preserve">
+        <value>Cannot issue a guest event in the form of a cloud/air ball.</value>
+    </data>
+    <data name="YOKAI" xml:space="preserve">
+        <value>Yokai</value>
+    </data>
+    <data name="YOKAI_EV1" xml:space="preserve">
+        <value>Hunting, if conversations are nearby</value>
+    </data>
+    <data name="YOKAI_EV1_D" xml:space="preserve">
+        <value>Can begin hunting up to 80% Sanity if players talk near him.</value>
+    </data>
+    <data name="YOKAI_EV2" xml:space="preserve">
+        <value>Hears and senses electronics within a 2.5 m radius</value>
+    </data>
+    <data name="YOKAI_EV2_D" xml:space="preserve">
+        <value>During a hunt, he hears the voices of players and senses their electronics only within a radius of up to 2.5 m from himself.</value>
+    </data>
+    <data name="YOKAI_EV3" xml:space="preserve">
+        <value>Spawn close to the box</value>
+    </data>
+    <data name="YOKAI_EV3_D" xml:space="preserve">
+        <value>The radius of materialization from the box is 2.5 meters, instead of 5 meters</value>
+    </data>
+    <data name="HANTU" xml:space="preserve">
+        <value>Hantu</value>
+    </data>
+    <data name="HANTU_EV1" xml:space="preserve">
+        <value>Increased chance to turn off the shield</value>
+    </data>
+    <data name="HANTU_EV1_D" xml:space="preserve">
+        <value>Never turns on the shield; on the contrary, it has an increased chance of turning it off.</value>
+    </data>
+    <data name="HANTU_EV2" xml:space="preserve">
+        <value>Constant evidence of sub-zero temperature</value>
+    </data>
+    <data name="HANTU_EV2_D" xml:space="preserve">
+        <value>Hantu always has the “Minus Temperature” clue on Nightmare or Madness.</value>
+    </data>
+    <data name="HANTU_EV3" xml:space="preserve">
+        <value>Speed ??depends on the room</value>
+    </data>
+    <data name="HANTU_EV3_D" xml:space="preserve">
+        <value>Hantu speed depends on room temperature</value>
+    </data>
+    <data name="HANTU_EV4" xml:space="preserve">
+        <value>Steam from the mouth</value>
+    </data>
+    <data name="HANTU_EV4_D" xml:space="preserve">
+        <value>Emits steam from its mouth if the shield is turned off at the location.</value>
+    </data>
+    <data name="GORYO" xml:space="preserve">
+        <value>Goryo</value>
+    </data>
+    <data name="GORYO_EV1" xml:space="preserve">
+        <value>Doesn't change room</value>
+    </data>
+    <data name="GORYO_EV1_D" xml:space="preserve">
+        <value>Grief will never change its room (the exception is when using the wish "I want my sanity back" on the monkey's paw)</value>
+    </data>
+    <data name="GORYO_EV2" xml:space="preserve">
+        <value>Sits in the room</value>
+    </data>
+    <data name="GORYO_EV2_D" xml:space="preserve">
+        <value>Cannot walk long distances from his room</value>
+    </data>
+    <data name="GORYO_EV3" xml:space="preserve">
+        <value>DOTS only via camera without players</value>
+    </data>
+    <data name="GORYO_EV3_D" xml:space="preserve">
+        <value>Appears on DOTS only through a video camera and when there are no players in the room (it can appear in a room with a player, but the chance of this is very low).</value>
+    </data>
+    <data name="GORYO_EV4" xml:space="preserve">
+        <value>Permanent evidence “Laser projector”</value>
+    </data>
+    <data name="GORYO_EV4_D" xml:space="preserve">
+        <value>Goryo will always have the “Laser Projector” clue on Nightmare and Madness.</value>
+    </data>
+    <data name="MYLING" xml:space="preserve">
+        <value>Myling</value>
+    </data>
+    <data name="MYLING_EV1" xml:space="preserve">
+        <value>Walks quietly</value>
+    </data>
+    <data name="MYLING_EV1_D" xml:space="preserve">
+        <value>Makes sounds more often into a directional microphone than other ghosts</value>
+    </data>
+    <data name="MYLING_EV2" xml:space="preserve">
+        <value>Talks a lot into the microphone</value>
+    </data>
+    <data name="MYLING_EV2_D" xml:space="preserve">
+        <value>Makes sounds more often into a directional microphone than other ghosts</value>
+    </data>
+    <data name="ONRYO" xml:space="preserve">
+        <value>Onryo</value>
+    </data>
+    <data name="ONRYO_EV1" xml:space="preserve">
+        <value>The candle works like a crucifix</value>
+    </data>
+    <data name="ONRYO_EV1_D" xml:space="preserve">
+        <value>The flame works on Onryo like a crucifix (radius 4 meters). The candle always takes precedence over the crucifix.</value>
+    </data>
+    <data name="THE_TWINS" xml:space="preserve">
+        <value>The Twins</value>
+    </data>
+    <data name="THE_TWINS_EV1" xml:space="preserve">
+        <value>The crucifix only works for the main guest</value>
+    </data>
+    <data name="THE_TWINS_EV1_D" xml:space="preserve">
+        <value>The crucifix will only work on the “real” ghost (the main twin)</value>
+    </data>
+    <data name="THE_TWINS_EV2" xml:space="preserve">
+        <value>Varying speed depending on appearance</value>
+    </data>
+    <data name="THE_TWINS_EV2_D" xml:space="preserve">
+        <value>Speed ??if the ghost started hunting from the standard range ("main twin") = 1.53 m/s, and from the extended range ("shadow twin") = 1.87 m/s</value>
+    </data>
+    <data name="THE_TWINS_EV3" xml:space="preserve">
+        <value>Non-primary guest has no signs</value>
+    </data>
+    <data name="THE_TWINS_EV3_D" xml:space="preserve">
+        <value>The Shadow Twin does not respond via radio, does not affect temperature, and does not follow motion sensors.</value>
+    </data>
+    <data name="THE_TWINS_EV4" xml:space="preserve">
+        <value>Equal chance to start hunting from different places</value>
+    </data>
+    <data name="THE_TWINS_EV4_D" xml:space="preserve">
+        <value>Each twin has a 50% chance of starting a hunt (the shadow twin will start from the location of their last interaction).</value>
+    </data>
+    <data name="THE_TWINS_EV5" xml:space="preserve">
+        <value>He interrupts the guest event himself</value>
+    </data>
+    <data name="THE_TWINS_EV5_D" xml:space="preserve">
+        <value>He can interrupt his paranormal activity himself. When one of the twins gives a guest event, the other can interact and the guest event will be interrupted.</value>
+    </data>
+    <data name="THE_TWINS_EV6" xml:space="preserve">
+        <value>Two actions at the same time</value>
+    </data>
+    <data name="THE_TWINS_EV6_D" xml:space="preserve">
+        <value>Performs 2 actions simultaneously within a range of 3 meters from himself (standard range/"main twin") and 16 meters (extended range/"shadow twin"). At the same time, a broken line will appear on the activity graph</value>
+    </data>
+    <data name="RAIJU" xml:space="preserve">
+        <value>Raiju</value>
+    </data>
+    <data name="RAIJU_EV1" xml:space="preserve">
+        <value>Previously, hunting with devices turned on</value>
+    </data>
+    <data name="RAIJU_EV1_D" xml:space="preserve">
+        <value>Can start hunting with 65% sanity if there is at least one switched on electronic device nearby.</value>
+    </data>
+    <data name="RAIJU_EV2" xml:space="preserve">
+        <value>Speeds up if the player's device is turned on</value>
+    </data>
+    <data name="RAIJU_EV2_D" xml:space="preserve">
+        <value>Accelerates up to 2.5 m/s if the player's electronic equipment is turned on nearby. Small cards - 6 meters; Medium cards - 8 meters; Large cards - 10 meters.</value>
+    </data>
+    <data name="RAIJU_EV3" xml:space="preserve">
+        <value>Increased interference radius</value>
+    </data>
+    <data name="RAIJU_EV3_D" xml:space="preserve">
+        <value>Raiju will interfere with electronic equipment at a distance of 15 meters, instead of the standard 10 meters.</value>
+    </data>
+    <data name="OBAKE" xml:space="preserve">
+        <value>Obake</value>
+    </data>
+    <data name="OBAKE_EV1" xml:space="preserve">
+        <value>Doesn't always leave fingerprints</value>
+    </data>
+    <data name="OBAKE_EV1_D" xml:space="preserve">
+        <value>Obake leaves prints with a 75% chance</value>
+    </data>
+    <data name="OBAKE_EV2" xml:space="preserve">
+        <value>Changes its model</value>
+    </data>
+    <data name="OBAKE_EV2_D" xml:space="preserve">
+        <value>While hunting, Obake has a 6.66% chance each time he blinks to transform into another ghost model of the same gender.</value>
+    </data>
+    <data name="OBAKE_EV3" xml:space="preserve">
+        <value>Always gives Ultraviolet</value>
+    </data>
+    <data name="OBAKE_EV3_D" xml:space="preserve">
+        <value>Obake always has the Ultraviolet ability on Nightmare or Madness.</value>
+    </data>
+    <data name="OBAKE_EV4" xml:space="preserve">
+        <value>Many fingers</value>
+    </data>
+    <data name="OBAKE_EV4_D" xml:space="preserve">
+        <value>leaves a unique fingerprint with a probability of 16.7% (6 fingers on doors, 2 fingers on switches, 5 on keyboards and grilles)</value>
+    </data>
+    <data name="OBAKE_EV5" xml:space="preserve">
+        <value>Prints disappear quickly</value>
+    </data>
+    <data name="OBAKE_EV5_D" xml:space="preserve">
+        <value>halves the remaining time for all prints on location.</value>
+    </data>
+    <data name="MIMIC" xml:space="preserve">
+        <value>Mimic</value>
+    </data>
+    <data name="MOROI" xml:space="preserve">
+        <value>Moroi</value>
+    </data>
+    <data name="DEOGEN" xml:space="preserve">
+        <value>Deogen</value>
+    </data>
+    <data name="THAYE" xml:space="preserve">
+        <value>Thaye</value>
+    </data>
+    <data name="BLINK" xml:space="preserve">
+        <value>Blink</value>
+    </data>
+    <data name="MOROI_EV1" xml:space="preserve">
+        <value>Places a curse through speech</value>
+    </data>
+    <data name="MOROI_EV1_D" xml:space="preserve">
+        <value>Places a curse on the player via radio or directional microphone. The curse doubles the rate at which the sanity of the player on whom it is cast decreases (you can pause it by leaving the house or drinking a sedative, thereby removing it completely).</value>
+    </data>
+    <data name="MOROI_EV2" xml:space="preserve">
+        <value>Smudge Stick Stunning</value>
+    </data>
+    <data name="MOROI_EV2_D" xml:space="preserve">
+        <value>Smudge Stick stunning duration during a hunt increased by 50% (7.5 seconds).</value>
+    </data>
+    <data name="MOROI_EV3" xml:space="preserve">
+        <value>Speed depends on sanity</value>
+    </data>
+    <data name="MOROI_EV3_D" xml:space="preserve">
+        <value>The speed of the Moroi depends on the team's average sanity. For every 5% of average sanity lost, the Moroi increases its speed by 0.075 m/s:
+
+50% - 1.5 m/s
+45% - 1.575 m/s
+40% - 1.65 m/s
+35% - 1.725 m/s
+30% - 1.8 m/s
+25% - 1.825 m/s
+20% - 1.95 m/s
+15% - 2.025 m/s
+10% - 2.1 m/s
+5% - 2.175 m/s
+0% - 2.25 m/s</value>
+    </data>
+    <data name="MOROI_EV4" xml:space="preserve">
+        <value>Permanent evidence: Spirit Box</value>
+    </data>
+    <data name="MOROI_EV4_D" xml:space="preserve">
+        <value>The Moroi always has the 'Spirit Box' evidence on Nightmare or Insanity difficulty</value>
+    </data>
+    <data name="THAYE_EV1" xml:space="preserve">
+        <value>Ages</value>
+    </data>
+    <data name="THAYE_EV1_D" xml:space="preserve">
+        <value>The speed, hunt threshold, and behavior of the Thaye depend on its age.
+
+The sanity threshold starts at 75%. For each aging phase, this value decreases by 6%, with a final value of 15%.
+Speed starts at 2.75 m/s. For each aging phase, this value decreases by 0.175 m/s, with a final value of 1 m/s.
+Activity at the start (interactions and paranormal events) is 200%. For each aging phase, this value decreases by 15%, with a final value of 50%</value>
+    </data>
+    <data name="THAYE_EV2" xml:space="preserve">
+        <value>Does not age if a player is nearby.</value>
+    </data>
+    <data name="THAYE_EV2_D" xml:space="preserve">
+        <value>Does not age if a player is nearby.</value>
+    </data>
+    <data name="ONRYO_EV2_D" xml:space="preserve">
+        <value />
+    </data>
+    <data name="WRAITH_EV1" xml:space="preserve">
+        <value>Salt footprints</value>
+    </data>
+    <data name="MIMIC_EV1" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SPIRIT" xml:space="preserve">
+        <value>Spirit</value>
+    </data>
+    <data name="WRAITH_EV1_D" xml:space="preserve">
+        <value>Wraith never leaves salt footprints</value>
+    </data>
+    <data name="SPIRIT_EV1" xml:space="preserve">
+        <value>Delay after smudge</value>
     </data>
 </root>
