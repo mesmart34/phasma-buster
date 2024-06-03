@@ -1,7 +1,7 @@
 name: Deployment
 env:
   PUBLISH_DIR: bin/Release/net8.0/publish/wwwroot
-  VERSION: 0.1.${{ github.run_number }}
+  VERSION: 0.3.${{ github.run_number }}
 
 # Controls when the action will run
 on:
