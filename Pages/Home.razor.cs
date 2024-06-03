@@ -58,4 +58,10 @@ public partial class Home
         
         return visible;
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Js.InvokeVoidAsync("setButtonsLikeWindows");
+        await base.OnAfterRenderAsync(firstRender);
+    }
 }
