@@ -26,11 +26,14 @@
                                                 class="noselect"/>
                                 </div>
                                 <div class="my-auto w-100 d-flex justify-content-center">
-                                    @foreach (var evidence in modelGhost.Evidences[EvidenceType.Standart].Cast<StandardEvidence>())
+                                    @foreach (var evidence in modelGhost.Evidences[EvidenceType.Standard])
                                     {
-                                        <RadzenIcon Icon="@(evidence.IconName)"
-                                                    class="mx-2 noselect"
-                                                    title="@Localization[evidence.Name]"/>
+                                        if (evidence.Name != null)
+                                        {
+                                            <RadzenIcon Icon="@(evidence.IconName)"
+                                                        class="mx-2 noselect"
+                                                        title="@Localization[evidence.Name]"/>   
+                                        }
                                     }
                                 </div>
                                 <RadzenPanel class="my-auto panel">
@@ -59,7 +62,7 @@
                                     @foreach (var evidenceGroup in modelGhost.Evidences
                                                   .GroupBy(x => x.Key)
                                                   .OrderBy(x => x.Key)
-                                                  .Where(x => x.Key != EvidenceType.Standart)
+                                                  .Where(x => x.Key != EvidenceType.Standard)
                                                   .ToDictionary(x => x.Key, x => x.SelectMany(x => x.Value)))
                                     {
                                         <div style="font-size: 1.0rem;">
