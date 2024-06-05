@@ -16,7 +16,7 @@
 
 * {
     box-sizing: border-box;
-    color: white;
+    /*color: white;*/
     font-family: "Noto Sans JP", sans-serif;
     letter-spacing: 2px;
 }
@@ -85,4 +85,410 @@
 .description-text
 {
     color: rgba(255,255,255,0.7);
+}
+
+.meta-label
+{
+    margin-left: 0.5rem;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    position: relative;
+    max-width: 100%;
+    font-size: 0.875rem;
+    box-shadow: var(--label-inset-border) !important;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    height: 29px;
+}
+
+.meta-label-text-light
+{
+    color: rgb(255, 255, 255);
+}
+
+.meta-label-scoped
+{
+    box-shadow: currentcolor 0px 0px 0px 2px inset;
+}
+
+.meta-label-link
+{
+    line-height: 1rem;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    color: inherit;
+    max-width: 100%;
+    overflow: hidden;
+    align-items: center;
+    text-decoration: none;
+}
+
+.meta-link
+{
+    text-decoration: none;
+}
+
+.meta-link:hover
+{
+    text-decoration: underline;
+}
+
+
+.meta-label-link-have-image
+{
+    padding-left: 11px;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+}
+
+.meta-label-link-icon
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: 0;
+    font-size: 1.6rem;
+}
+
+.meta-label-green
+{
+    --label-background-color: rgb(46,129,189);
+    --label-inset-border: inset 0 0 0 2px rgb(46,129,189);
+}
+
+.meta-label-text
+{
+    height: 29px;
+    background-color: var(--label-background-color);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.25rem;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.meta-label-text-scoped
+{
+    color: rgb(31, 30, 36);
+    padding-left: 0.25rem;
+    padding-right: 0.5rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.25rem;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.bucket-view-meta-text
+{
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.meta-flex-glow-1
+{
+    flex-grow: 1;
+}
+
+::deep .rz-fileupload-buttonbar
+{
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+::deep .rz-fileupload-choose
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%!important;
+    width: 100%;
+}
+
+.meta-sidepanel {
+    backdrop-filter: blur(6rem);
+    /*background-color: rgb(254, 254, 254);*/
+    height: 100%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top: 0;
+    left: 100%;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: left 0.3s, width 0.3s; /* 0.5 second transition effect to slide in the sidepanel */
+    box-shadow: -10px 2px 15px 0px rgba(80, 80, 81, 0.2);
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+::deep .file-icon
+{
+    min-width: 100%;
+    min-height: 50px;
+    height: 70px;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.meta-sidebar-block
+{
+    padding: 0.75rem 0 1rem;
+    border-bottom: 1px solid #dcdcde;
+    width: 250px;
+}
+
+.meta-line-height-20
+{
+    line-height: 1.25rem;
+}
+
+.meta-font-weight-bold
+{
+    font-weight: 600;
+}
+
+.meta-align-items-center
+{
+    align-items: center;
+}
+
+.meta-value
+{
+    line-height: 1;
+}
+
+.meta-display-flex
+{
+    display:flex;
+}
+
+.meta-text-gray-900
+{
+    color: rgb(126 126 133);
+    /*color: #333238;*/
+}
+
+.meta-text-gray-800
+{
+    color: rgb(67, 66, 72);
+}
+
+.meta-issuable-show-labels
+{
+    font-size: 0;
+    margin-bottom: -5px;
+}
+
+.meta-flex-direction-column
+{
+    flex-direction: column;
+}
+
+.meta-flex-wrap
+{
+    flex-wrap: wrap;
+}
+
+.meta-display-grid
+{
+    display: grid;
+}
+
+.meta-w-full
+{
+    width: 100%;
+}
+
+.meta-mb-3
+{
+    margin-bottom: 0.5rem;
+}
+
+.meta-title-button
+{
+    transition: 0.3s;
+    box-shadow: none;
+    background: #ececef!important;
+}
+
+.meta-button
+{
+    border-width: 0;
+    border-radius: 5px;
+    background: transparent;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    line-height: 1rem;
+    font-size: 0.875rem;
+    box-shadow: none;
+    mix-blend-mode: multiply
+}
+
+.meta-button:not(:disabled):not(.disabled) {
+    cursor: pointer
+}
+
+.meta-button:hover {
+    color: white;
+    background: transparent;
+}
+
+.meta-title-button:hover
+{
+    box-shadow: inset 0 0 0 2px #89888d, 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+.meta-issuable-files a:not(.btn) {
+    color: rgb(126 126 133);
+}
+
+.meta-drawer
+{
+    font-size: 0.975rem;
+}
+
+.meta-drawer-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #dcdcde;
+    border-bottom-width: 1px;
+}
+
+.closebtn
+{
+    font-size: 1.5rem;
+}
+
+.meta-drawer-body
+{
+
+}
+
+.meta-drawer-body>*
+{
+    border-bottom-style: solid;
+    border-bottom-color: rgb(57 57 61);
+    border-bottom-width: 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.meta-drawer-title
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.meta-line-height-24
+{
+    line-height: 1.5rem;
+}
+
+.meta-font-size-h2
+{
+    font-size: 1.2875rem;
+}
+
+.meta-my-0
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.meta-mx-1
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h2,.h2
+{
+    font-weight: 600;
+    color: rgb(126 126 133);
+    /*color: rgb(86 86 91);*/
+    /*color: #333238;*/
+}
+
+.meta-sidebar-buttons
+{
+    margin-top: 0.5rem;
+}
+
+::deep .meta-textArea
+{
+    margin-top: 1rem;
+    resize: none;
+}
+
+::deep .meta-h-95
+{
+    height: 95%!important;
+}
+
+.meta-button-text
+{
+    align-items: center;
+    display: flex;
+}
+
+::deep .meta-download-icon
+{
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.meta-cursive
+{
+    font-family: cursive;
+}
+
+.meta-mt-1
+{
+    margin-top: 1rem;
 }
