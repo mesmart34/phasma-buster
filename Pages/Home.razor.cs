@@ -11,7 +11,10 @@ namespace PhasmaBuster.Pages;
 public partial class Home
 {
     private Model _model = new();
-    
+    private Ghost? _currentGhost;
+    private string _sidePanelStyle = string.Empty;
+    private bool _isRightSideBarOpen = false;
+
     [Inject] 
     private NavigationManager NavigationManager { get; set; } = null!;
     
@@ -62,6 +65,27 @@ public partial class Home
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await Js.InvokeVoidAsync("setButtonsLikeWindows");
+
         await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task CloseNav()
+    {
+        if (_isRightSideBarOpen)
+        {
+            await Js.InvokeVoidAsync("closeNav");
+        }
+
+        _isRightSideBarOpen = false;
+    }
+    
+    private async Task OpenNav()
+    {
+        if (!_isRightSideBarOpen)
+        {
+            await Js.InvokeVoidAsync("openNav");
+        }
+
+        _isRightSideBarOpen = true;
     }
 }
