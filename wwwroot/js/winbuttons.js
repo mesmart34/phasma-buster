@@ -11,38 +11,43 @@
     return isXInside && isYInside;
 }
 
+function removeLiteners (el)
+{
+    elClone = el.cloneNode(true);
+    el.parentNode.replaceChild(elClone, el);
+}
+
 window.setButtonsLikeWindows = () =>
 {
     // var winGrid = document.getElementsByClassName("rz-body");
     
     var winGrid = document.getElementById("app");
 
-    function mousemovef (grid)
-    {
-        var x = grid.clientX;
-        var y = grid.clientY;
-
-        winGrid.querySelectorAll(".win-btn").forEach((button) =>
-        {
-            var i = 0;
-            if (i <= 1)
-            {
-                let event = new MouseEvent("mousemove",
-                    {
-                        clientX: x,
-                        clientY: y,
-                        view: window
-                    });
-                button.dispatchEvent(event);
-            }
-            i++;
-        });
-    }
-
     document.querySelectorAll("div[id=app]").forEach((winGrid) => 
     {
-        // winGrid.removeEventListener("mousemove", mousemovef);
-        winGrid.addEventListener("mousemove", mousemovef.bind(this));
+        function mousemovef (grid)
+        {
+            var x = grid.clientX;
+            var y = grid.clientY;
+
+            winGrid.querySelectorAll(".win-btn").forEach((button) =>
+            {
+                var i = 0;
+                if (i <= 1)
+                {
+                    let event = new MouseEvent("mousemove",
+                        {
+                            clientX: x,
+                            clientY: y,
+                            view: window
+                        });
+                    button.dispatchEvent(event);
+                }
+                i++;
+            });
+        }
+        winGrid.removeEventListeners("mousemove");
+        winGrid.addEventListener("mousemove", mousemovef);
     });
 
     document.querySelectorAll(".win-btn").forEach((b) => 
@@ -52,6 +57,9 @@ window.setButtonsLikeWindows = () =>
             e.target.style.background = "linear-gradient(rgb(34,37,41) 0 0) content-box";
             b.style.borderImage = null;
         }
+        
+        b.removeEventListeners("mouseleave");
+        b.addEventListener("mouseleave", mouseleavef);
 
         function mousemoveff (e)
         {
@@ -73,11 +81,65 @@ window.setButtonsLikeWindows = () =>
 
             // b.style.borderImage = `radial-gradient(20% 75% at ${x}px ${y}px ,rgba(255,255,255,${light}),rgba(255,255,255,${border}) ) 1 / 3px / 0px stretch `;
         }
-        
-        // b.removeEventListener("mouseleave", mouseleavef);
-        b.addEventListener("mouseleave", mouseleavef.bind(this));
-        
-        // b.removeEventListener("mousemove", mousemoveff);
-        b.addEventListener("mousemove", mousemoveff.bind(this));
+        b.removeEventListeners("mousemove");
+        b.addEventListener("mousemove", mousemoveff);
     });
 }
+
+//========================removerEventsListeners===================================
+
+(function()
+{
+    let target = EventTarget.prototype;
+    let functionName = 'addEventListener';
+    let func = target[functionName];
+
+    let symbolHidden = Symbol('hidden');
+
+    function hidden(instance)
+    {
+        if(instance[symbolHidden] === undefined)
+        {
+            let area = {};
+            instance[symbolHidden] = area;
+            return area;
+        }
+
+        return instance[symbolHidden];
+    }
+
+    function listenersFrom(instance)
+    {
+        let area = hidden(instance);
+        if(!area.listeners) { area.listeners = []; }
+        return area.listeners;
+    }
+
+    target[functionName] = function(type, listener)
+    {
+        let listeners = listenersFrom(this);
+
+        listeners.push({ type, listener });
+
+        func.apply(this, [type, listener]);
+    };
+
+    target['removeEventListeners'] = function(targetType)
+    {
+        let self = this;
+
+        let listeners = listenersFrom(this);
+        let removed = [];
+
+        listeners.forEach(item =>
+        {
+            let type = item.type;
+            let listener = item.listener;
+
+            if(type == targetType)
+            {
+                self.removeEventListener(type, listener);
+            }
+        });
+    };
+})();
